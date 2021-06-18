@@ -26,9 +26,13 @@ jobs:
        
     - name: Setup Nuget
       uses: NuGet/setup-nuget@v1.0.2
+      env:
+       ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
     - name: Restore Nuget packages
       run: nuget restore CSharp.sln
+      env:
+       ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
        
     - name: Build Solution
       run: msbuild CSharp.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
