@@ -27,7 +27,7 @@ jobs:
         
        - name: Test  
          run:
-          echo "Test"
+          echo "Test1"
        
        - name: Install Nuget
          uses: nuget/setup-nuget@v1
