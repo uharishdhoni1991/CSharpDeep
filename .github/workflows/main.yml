@@ -24,7 +24,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-         echo "Test"
+        
+      - name: Test  
+        run:
+          echo "Test"
 
       # Setup MSBUILD
       - name: Setup MSBuild (vswhere-path)
