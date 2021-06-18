@@ -38,8 +38,6 @@ namespace CSharpVersions._2._0
             del(new Big());
 
 			Console.ReadLine();
-
-            ''
         }
 	}
 }
