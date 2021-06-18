@@ -39,7 +39,7 @@ jobs:
 
       # Setup MSBUILD
        - name: Setup MSBuild.exe
-         uses: warrenbuckley/Setup-MSBuild@v1
+         uses: warrenbuckley/Setup-MSBuild
         
        - name: Run MSBuild
          run: msbuild .\CSharp.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
