@@ -8,7 +8,7 @@ on:
   push:
     branches: [ main ]
   pull_request:
-    branches: [ main ]
+    branches: '*'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -18,47 +18,28 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+       - uses: actions/checkout@master
         
-      - name: Test  
-        run:
+       - name: Test  
+         run:
           echo "Test"
+       
+       - name: Install Nuget
+         uses: nuget/setup-nuget@v1
+         with:
+          nuget-version: '5.3.1'
+          
+       - name: NuGet to restore dependencies as well as project-specific tools that are specified in the project file
+         run: nuget restore
 
       # Setup MSBUILD
-      - name: Setup MSBuild (vswhere-path)
-        id: setup_msbuild_explicit
-        uses: ./
-        with:
-         vswhere-path: C:\ProgramData\chocolatey\bin
- 
-      - name: Setup MSBuild (PATH)
-        id: setup_msbuild_path
-        uses: ./
-
-      - name: Setup MSBuild (fallback)
-        id: setup_msbuild_fallback
-        uses: ./
-        env:
-          PATH: ''
-
-      - name: echo msbuild path
-        run: |
-         echo "vswhere-path: ${{ steps.setup_msbuild_explicit.outputs.msbuildPath }}"
-         echo "PATH: ${{ steps.setup_msbuild_path.outputs.msbuildPath }}"
-         echo "Fallback: ${{ steps.setup_msbuild_fallback.outputs.msbuildPath }}"
-      - name: echo MSBuild
-        run: msbuild -version
+       - name: Add msbuild to PATH
+         uses: microsoft/setup-msbuild@v1.0.0 
         
-      - name: Setup Nuget
-        uses: NuGet/setup-nuget@v1.0.2
-        
-      - name: Restore Nuget packages
-        run: nuget restore CSharp.sln
-        
-      - name: Build and Publish Web App
-        run: msbuild CSharp.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
+       - name: Run MSBuild
+         run: msbuild .\CSharp.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
