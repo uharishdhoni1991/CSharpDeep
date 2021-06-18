@@ -23,3 +23,12 @@ jobs:
       run: echo “::add-path::C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin”
       env:
        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+       
+    - name: Setup Nuget
+      uses: NuGet/setup-nuget@v1.0.2
+
+    - name: Restore Nuget packages
+      run: nuget restore CSharp.sln
+       
+    - name: Build Solution
+      run: msbuild CSharp.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
