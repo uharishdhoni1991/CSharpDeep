@@ -25,8 +25,17 @@ namespace TechGig
             //IExecute matrixAddition = new MatrixAddition();
             //matrixAddition.Execute();
 
-            IExecute rollAMatrix = new RollAMatrix();
-            rollAMatrix.Execute();
+            //IExecute rollAMatrix = new RollAMatrix();
+            //rollAMatrix.Execute();
+
+            //IExecute gcd = new GCD();
+            //gcd.Execute();
+
+            //IExecute pairFinder = new PairFinder();
+            //pairFinder.Execute();
+
+            IExecute smallestSubArraySort = new SmallestSubArraySort();
+            smallestSubArraySort.Execute();
         }
     }
 }
