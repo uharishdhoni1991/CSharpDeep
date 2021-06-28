@@ -34,8 +34,20 @@ namespace TechGig
             //IExecute pairFinder = new PairFinder();
             //pairFinder.Execute();
 
-            IExecute smallestSubArraySort = new SmallestSubArraySort();
-            smallestSubArraySort.Execute();
+            //IExecute smallestSubArraySort = new SmallestSubArraySort();
+            //smallestSubArraySort.Execute();
+
+            //IExecute binaryToDecimal = new BinaryToDecimal();
+            //binaryToDecimal.Execute();
+
+            //IExecute mulOfOddAndEven = new MulOfOddAndEven();
+            //mulOfOddAndEven.Execute();
+
+            //IExecute twoSum = new TwoSum();
+            //twoSum.Execute();
+
+            IExecute playWithAverages = new PlayWithAverages();
+            playWithAverages.Execute();
         }
     }
 }
