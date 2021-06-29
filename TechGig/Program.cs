@@ -46,8 +46,11 @@ namespace TechGig
             //IExecute twoSum = new TwoSum();
             //twoSum.Execute();
 
-            IExecute playWithAverages = new PlayWithAverages();
-            playWithAverages.Execute();
+            //IExecute playWithAverages = new PlayWithAverages();
+            //playWithAverages.Execute();
+
+            IExecute passwordEnhancer = new PasswordEnhancer();
+            passwordEnhancer.Execute();
         }
     }
 }
