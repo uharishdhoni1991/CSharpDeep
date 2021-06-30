@@ -49,8 +49,14 @@ namespace TechGig
             //IExecute playWithAverages = new PlayWithAverages();
             //playWithAverages.Execute();
 
-            IExecute passwordEnhancer = new PasswordEnhancer();
-            passwordEnhancer.Execute();
+            //IExecute passwordEnhancer = new PasswordEnhancer();
+            //passwordEnhancer.Execute();
+
+            //IExecute consecutiveNumbers = new ConsecutiveNumbers();
+            //consecutiveNumbers.Execute();
+
+            IExecute compareDiagonals = new CompareDiagonals();
+            compareDiagonals.Execute();
         }
     }
 }

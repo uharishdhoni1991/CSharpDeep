@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Practice\CompareDiagonals.cs" />
+    <Compile Include="Practice\ConsecutiveNumbers.cs" />
     <Compile Include="Practice\PasswordEnhancer.cs" />
     <Compile Include="Practice\PlayWithAverages.cs" />
     <Compile Include="Practice\MulOfOddAndEven.cs" />
@@ -65,6 +67,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ChallengesDescription.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
