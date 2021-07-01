@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpVersions", "CSharpVer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechGig", "TechGig\TechGig.csproj", "{4341FF9A-CB34-41A8-9D52-81397D3B1FC2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCode", "LeetCode\LeetCode.csproj", "{46E3318D-C1A9-422D-925D-7B39A13FF520}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4341FF9A-CB34-41A8-9D52-81397D3B1FC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4341FF9A-CB34-41A8-9D52-81397D3B1FC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4341FF9A-CB34-41A8-9D52-81397D3B1FC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46E3318D-C1A9-422D-925D-7B39A13FF520}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46E3318D-C1A9-422D-925D-7B39A13FF520}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46E3318D-C1A9-422D-925D-7B39A13FF520}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46E3318D-C1A9-422D-925D-7B39A13FF520}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
