@@ -128,27 +128,27 @@ namespace Arrays
 			int arrCounter2 = 0;
 			int arrCounter3 = 0;
 
-			while(arrCounter1 < m && arrCounter2 < n)
-            {
-				if(nums1[arrCounter1] < nums2[arrCounter2])
-                {
+			while (arrCounter1 < m && arrCounter2 < n)
+			{
+				if (nums1[arrCounter1] < nums2[arrCounter2])
+				{
 					resultantArray[arrCounter3] = nums1[arrCounter1];
 					arrCounter1++;
-                }
-                else
-                {
+				}
+				else
+				{
 					resultantArray[arrCounter3] = nums2[arrCounter2];
 					arrCounter2++;
-                }
+				}
 				arrCounter3++;
-            }
+			}
 
-			while(arrCounter1 < m)
-            {
+			while (arrCounter1 < m)
+			{
 				resultantArray[arrCounter3] = nums1[arrCounter1];
 				arrCounter1++;
 				arrCounter3++;
-            }
+			}
 
 
 			while (arrCounter2 < n)
@@ -162,7 +162,7 @@ namespace Arrays
 			{
 				nums1[i] = resultantArray[i];
 			}
-		}		
+		}
 
 		internal int RemoveElement(int[] nums, int val)
 		{
@@ -179,31 +179,78 @@ namespace Arrays
 		}
 
 		internal int RemoveDuplicates(int[] nums)
-        {
-			int totalLength = nums.Length;
-			int j = 1;
-			int currentNum = 0;
-			int duplicates = 0;
+		{
+			if (nums.Length == 0)
+				return 0;
 
-			for (int i = 0; i < totalLength; i++)
+			int i = 0;
+			for (int j = 1; j < nums.Length; j++)
 			{
-				currentNum = nums[i];
-
-				if (currentNum == nums[j])
+				if (nums[j] != nums[i])
 				{
-					duplicates++;
+					i++;
+					nums[i] = nums[j];
 				}
-				else
+			}
+			return i + 1;
+		}
+
+		internal bool CheckDouble(int[] arr)
+		{
+			bool doubleExist = false;
+
+			if (arr == null || arr.Length == 0)
+				return doubleExist;
+
+			for (int j = 0; j < arr.Length; j++)
+			{
+				for (int i = 1; i < arr.Length; i++)
 				{
-					int noToReplace = nums[j + 1];
-					for (int k = i; k < i + duplicates; k++)
+					if (i == j)
+						continue;
+
+					if (arr[i] == 0 && arr[j] == 0)
 					{
-						nums[k] = noToReplace;
+						doubleExist = true;
+						break;
+					}
+					else if ((arr[i] != 0 && arr[j] != 0) && (arr[i] == 2 * arr[j] || arr[j] == 2 * arr[i]))
+					{
+						doubleExist = true;
+						break;
 					}
 				}
 			}
 
-			return duplicates;
+			return doubleExist;
+		}
+
+		public bool ValidMountainArray(int[] arr)
+		{
+			int arrLength = arr.Length;
+			bool orderSwitched = false;
+			int incCounter = 0;
+			int decCounter = 0;
+
+			for (int j = 0; j < arrLength - 1; j++)
+			{
+				if (!orderSwitched && arr[j] < arr[j + 1])
+				{
+					incCounter++;
+					continue;
+				}
+
+				orderSwitched = true;
+
+
+				if (orderSwitched && arr[j] > arr[j + 1])
+				{
+					decCounter++;
+					continue;
+				}
+			}
+
+			return incCounter > 0 && decCounter > 0 && incCounter + decCounter + 1 == arrLength;
 		}
 
 		private int FindNoOfDigits(int number, int noOfDigits)
