@@ -10,7 +10,7 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            new Arrays.ArrayFunc().Merge(new int[] { -1, 0, 0, 3, 3, 3, 0, 0, 0 }, 6, new int[] { 1, 2, 2 }, 3);
+            new Arrays.ArrayFunc().RemoveDuplicates(new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 });
         }
     }
 }

@@ -8,7 +8,7 @@ namespace Arrays
 {
 	public class ArrayFunc
 	{
-		public int FindMaxConsecutiveOnes(int[] nums)
+		internal int FindMaxConsecutiveOnes(int[] nums)
 		{
 			int maxConsecutiveOnes = 1;
 			int arrayLength = nums.Count();
@@ -33,7 +33,7 @@ namespace Arrays
 			return maxConOnes.Max();
 		}
 
-		public int FindNoOfNumbersWithEvenNoOfDigits(int[] nums)
+		internal int FindNoOfNumbersWithEvenNoOfDigits(int[] nums)
 		{
 			if (nums.Length <= 0)
 				return 0;
@@ -49,7 +49,7 @@ namespace Arrays
 			return noOfDigitsArray.Where(x => x % 2 == 0).Count();
 		}
 
-		public int[] SortedSquares(int[] nums)
+		internal int[] SortedSquares(int[] nums)
 		{
 			int numsLength = nums.Length;
 
@@ -74,7 +74,7 @@ namespace Arrays
 			return sortedSquareArray.OrderBy(num => num).ToArray();
 		}
 
-		public void DuplicateZeros(int[] arr)
+		internal void DuplicateZeros(int[] arr)
 		{
 			int arrayLength = arr.Length;
 
@@ -102,7 +102,7 @@ namespace Arrays
 			}
 		}
 
-		public void DuplicateZerosV2(int[] arr)
+		internal void DuplicateZerosV2(int[] arr)
 		{
 			int arrLength = arr.Length;
 
@@ -119,7 +119,7 @@ namespace Arrays
 
 		}
 
-		public void Merge(int[] nums1, int m, int[] nums2, int n)
+		internal void Merge(int[] nums1, int m, int[] nums2, int n)
 		{
 			int totalLength = m + n;
 			int[] resultantArray = new int[totalLength];
@@ -162,6 +162,48 @@ namespace Arrays
 			{
 				nums1[i] = resultantArray[i];
 			}
+		}		
+
+		internal int RemoveElement(int[] nums, int val)
+		{
+			int i = 0;
+			for (int j = 0; j < nums.Length; j++)
+			{
+				if (nums[j] != val)
+				{
+					nums[i] = nums[j];
+					i++;
+				}
+			}
+			return i;
+		}
+
+		internal int RemoveDuplicates(int[] nums)
+        {
+			int totalLength = nums.Length;
+			int j = 1;
+			int currentNum = 0;
+			int duplicates = 0;
+
+			for (int i = 0; i < totalLength; i++)
+			{
+				currentNum = nums[i];
+
+				if (currentNum == nums[j])
+				{
+					duplicates++;
+				}
+				else
+				{
+					int noToReplace = nums[j + 1];
+					for (int k = i; k < i + duplicates; k++)
+					{
+						nums[k] = noToReplace;
+					}
+				}
+			}
+
+			return duplicates;
 		}
 
 		private int FindNoOfDigits(int number, int noOfDigits)
