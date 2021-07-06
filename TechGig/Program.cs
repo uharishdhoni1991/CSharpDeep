@@ -55,8 +55,11 @@ namespace TechGig
             //IExecute consecutiveNumbers = new ConsecutiveNumbers();
             //consecutiveNumbers.Execute();
 
-            IExecute compareDiagonals = new CompareDiagonals();
-            compareDiagonals.Execute();
+            //IExecute compareDiagonals = new CompareDiagonals();
+            //compareDiagonals.Execute();
+
+            IExecute find = new FindIntOrFloatOrString();
+            find.Execute();
         }
     }
 }
