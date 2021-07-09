@@ -10,7 +10,7 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            new Arrays.ArrayFunc().ValidMountainArray(new int[] { 1, 2, 3, 4, 5, 3, 2, 1 });
+            new Arrays.ArrayFunc().FindDisappearedNumbers(new int[] { 4, 3, 2, 7, 8, 2, 3, 1 });
         }
     }
 }

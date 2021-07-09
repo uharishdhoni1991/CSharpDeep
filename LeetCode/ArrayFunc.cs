@@ -253,6 +253,151 @@ namespace Arrays
 			return incCounter > 0 && decCounter > 0 && incCounter + decCounter + 1 == arrLength;
 		}
 
+		public void MoveZeroes(int[] nums)
+		{
+			if (nums == null || nums.Length == 0)
+				return;
+
+			int arrLength = nums.Length;
+
+			int j = 0;
+
+			for (int i = 0; i < arrLength; i++)
+			{
+				if (nums[i] == 0)
+					continue;
+
+				int temp = nums[j];
+				nums[j] = nums[i];
+				nums[i] = temp;
+				j++;
+			}
+		}
+
+		public int[] SortArrayByParity(int[] nums)
+		{
+			int[] newArray = new int[nums.Length];
+			int oddCount = nums.Length-1;
+			int evenCount = 0;
+
+			for (int i = 0; i < nums.Length; i++)
+			{
+				if (nums[i] % 2 == 0)
+				{
+					newArray[evenCount] = nums[i];
+					evenCount++;
+				}
+				else
+				{
+					newArray[oddCount] = nums[i];
+					oddCount--;
+				}
+			}
+
+			return newArray;
+		}
+
+		public int HeightChecker(int[] heights) /*To Do : Improve Performance*/
+		{
+			int arrLength = heights.Length;
+			int[] newArray = new int[arrLength];
+
+			int temp = Int32.MaxValue;
+			int matchingIndices = 0;
+
+			for (int j = 0; j < arrLength; j++)
+			{
+				newArray[j] = heights[j];
+			}
+
+			
+			for (int j = 0; j < arrLength; j++)
+			{	 
+				for (int i = j + 1; i < arrLength; i++)
+				{
+					if(heights[j] > heights[i])
+                    {
+						temp = heights[i];
+						heights[i] = heights[j];
+						heights[j] = temp;
+                    }
+				}
+			}
+			
+
+			for (int i = 0; i < arrLength; i++)
+			{
+				if (newArray[i] != heights[i])
+					matchingIndices++;
+			}
+
+			return matchingIndices;
+		}
+
+		public int ThirdMax(int[] nums)/*To Do : Improve Performance*/
+		{
+			int arrLength = nums.Length;
+
+			HashSet<int> hash = new HashSet<int>();
+			int firstMax = int.MinValue;
+			int secondMax = int.MinValue;
+			int thirdMax = int.MinValue;	
+
+			for(int i=0; i<arrLength; i++)
+            {
+				int current = nums[i];
+
+				if (!hash.Contains(current))
+				{
+					if (nums[i] > firstMax)
+					{
+						thirdMax = secondMax;
+						secondMax = firstMax;
+						firstMax = current;
+					}
+					else if (nums[i] > secondMax)
+					{
+						thirdMax = secondMax;
+						secondMax = current;
+					}
+					else if(nums[i] > thirdMax)
+					{
+						thirdMax = current;
+					}
+
+					hash.Add(current);
+				}
+            }
+
+			return hash.Count >= 3 ? thirdMax : firstMax;
+		}
+
+		public IList<int> FindDisappearedNumbers(int[] nums)
+		{
+			Array.Sort(nums);
+			
+			for(int i=0; i < nums.Length; i++)
+            {
+				int temp = Math.Abs(nums[i]) - 1;
+
+				if (nums[temp] > 0)
+					nums[temp] = -nums[temp];				
+
+            }
+
+			int j = 0;
+			for(int i =0; i< nums.Length; i++)
+            {
+				if(nums[i] > 0)
+                {
+					nums[j] = i + 1;
+					j++;
+                }
+            }
+
+			return nums.Take(j).ToList();
+		}
+
 		private int FindNoOfDigits(int number, int noOfDigits)
 		{
 			if (number < 1 && number > Math.Pow(10, 5))

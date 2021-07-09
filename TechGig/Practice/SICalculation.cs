@@ -6,13 +6,15 @@ namespace TechGig.Practice
     {
         public void Execute()
         {
-            Console.WriteLine("SI");
+            double principal = default(double);
+            int interest = 0;
+            int years = 0;
 
-            Double principal = Double.Parse(Console.ReadLine());
-            int interest = int.Parse(Console.ReadLine());
-            int years = int.Parse(Console.ReadLine());
+            bool prin = Double.TryParse(Console.ReadLine(), out principal);
+            bool inte = int.TryParse(Console.ReadLine(), out interest);
+            bool yr = int.TryParse(Console.ReadLine(), out years);
 
-            if (principal < 0 || principal > 1000 || interest < 0 || interest > 1000 || years < 0 || years > 1000)
+            if (!(prin && inte && yr))
                 return;
 
             int simpleinterest = Convert.ToInt32(Math.Round((principal * interest * years) / 100));
