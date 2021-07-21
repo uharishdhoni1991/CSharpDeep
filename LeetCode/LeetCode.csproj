@@ -44,6 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayFunc.cs" />
+    <Compile Include="IExecute.cs" />
+    <Compile Include="Linked List\LinkedListBase.cs" />
+    <Compile Include="Linked List\LinkedListCycle.cs" />
+    <Compile Include="Linked List\Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
