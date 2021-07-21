@@ -36,3 +36,6 @@ jobs:
        
     - name: Build Solution
       run: msbuild CSharp.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
+    
+    - name: Unit Testing   
+      run: dotnet test
