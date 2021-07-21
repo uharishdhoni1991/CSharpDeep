@@ -35,7 +35,4 @@ jobs:
        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
        
     - name: Build Solution
-      run: msbuild CSharp.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
-    
-    - name: Unit Testing   
-      run: dotnet test "~/LeetCode UnitTests/LeedCode UnitTests.csproj"
+      run: msbuild CSharp.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile   
