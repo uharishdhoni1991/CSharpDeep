@@ -47,12 +47,17 @@
     <Compile Include="IExecute.cs" />
     <Compile Include="Linked List\LinkedListBase.cs" />
     <Compile Include="Linked List\LinkedListCycle.cs" />
+    <Compile Include="Linked List\LinkedListIntersection.cs" />
+    <Compile Include="Linked List\ListNode.cs" />
     <Compile Include="Linked List\Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Linked List\TwoPointerAlgorithm.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

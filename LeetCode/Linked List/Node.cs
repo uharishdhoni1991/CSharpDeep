@@ -1,4 +1,6 @@
-﻿namespace LeetCode.Linked_List
+﻿using System.Text;
+
+namespace LeetCode.Linked_List
 {
     public class Node
     {
@@ -25,7 +27,7 @@
 
         public override string ToString()
         {
-            return $"Current - {_val} *** Next - {Next?.Val}";
+            return Val.ToString();
         }
     }
 }

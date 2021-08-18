@@ -1,0 +1,9 @@
+﻿* If there is a loop containing n nodes, then once a pointer has entered the loop it will remain there forever !
+* So we can introduce another pointer and move both the pointers until they meet.
+* Lets assume initial values for pointers (modulo n) as a and b. Condition for pointers to meet after t steps is then
+	
+	a+t ≡ b+2t mod n
+
+	which equates to t = a-b mod n
+
+	This will work as long as difference doesn't share prime factors with n.
