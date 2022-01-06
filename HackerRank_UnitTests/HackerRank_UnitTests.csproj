@@ -5,12 +5,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FB3BDF8F-3092-415A-9CA2-50A177BC0237}</ProjectGuid>
+    <ProjectGuid>{7D556E8A-3EBA-406B-8C9C-275B8B0E65B5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LeetCode_UnitTests</RootNamespace>
-    <AssemblyName>LeetCode UnitTests</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <RootNamespace>HackerRank_UnitTests</RootNamespace>
+    <AssemblyName>HackerRank_UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
@@ -49,17 +49,16 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FindDissapearingNumbersTest.cs" />
-    <Compile Include="LinkedListTest.cs" />
+    <Compile Include="HackerRankChallenges.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LeetCode\LeetCode.csproj">
-      <Project>{46e3318d-c1a9-422d-925d-7b39a13ff520}</Project>
-      <Name>LeetCode</Name>
+    <ProjectReference Include="..\HackerRank\HackerRank.csproj">
+      <Project>{e73edbd2-5d46-4526-97c6-44fb43dd77da}</Project>
+      <Name>HackerRank</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

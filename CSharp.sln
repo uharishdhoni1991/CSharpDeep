@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechGig UnitTests", "TechGi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCode UnitTests", "LeetCode UnitTests\LeetCode UnitTests.csproj", "{FB3BDF8F-3092-415A-9CA2-50A177BC0237}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRank", "HackerRank\HackerRank.csproj", "{E73EDBD2-5D46-4526-97C6-44FB43DD77DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRank_UnitTests", "HackerRank_UnitTests\HackerRank_UnitTests.csproj", "{7D556E8A-3EBA-406B-8C9C-275B8B0E65B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{FB3BDF8F-3092-415A-9CA2-50A177BC0237}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB3BDF8F-3092-415A-9CA2-50A177BC0237}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB3BDF8F-3092-415A-9CA2-50A177BC0237}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E73EDBD2-5D46-4526-97C6-44FB43DD77DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E73EDBD2-5D46-4526-97C6-44FB43DD77DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E73EDBD2-5D46-4526-97C6-44FB43DD77DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E73EDBD2-5D46-4526-97C6-44FB43DD77DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D556E8A-3EBA-406B-8C9C-275B8B0E65B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D556E8A-3EBA-406B-8C9C-275B8B0E65B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D556E8A-3EBA-406B-8C9C-275B8B0E65B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D556E8A-3EBA-406B-8C9C-275B8B0E65B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

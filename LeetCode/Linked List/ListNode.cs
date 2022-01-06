@@ -1,4 +1,6 @@
-﻿namespace LeetCode.Linked_List
+﻿using System.Text;
+
+namespace LeetCode.Linked_List
 {
     internal class ListNode
     {
@@ -7,8 +9,16 @@
         public ListNode(int val) { Val = val; }
 
         public override string ToString()
-        {
-            return Val.ToString();
+        {            
+            StringBuilder toPrint = new StringBuilder();
+            ListNode currentNode = this;
+
+            while (null != this)
+            {
+                toPrint.Append(this.Val + ",");
+                currentNode = currentNode.Next;
+            }
+            return toPrint.ToString();
         }
     }
 }

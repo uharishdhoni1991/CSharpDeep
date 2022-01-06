@@ -4,12 +4,15 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace LeetCode_UnitTests
 {
     [TestClass]
-    public class LinkedListCycleTest
+    public class LinkedListTest
     {
         private LinkedListCycle _linkedListCycleOne;
         private LinkedListCycle _linkedListCycleTwo;
 
         private LinkedListIntersection _linkedListIntersection;
+        private LinkedListNthNode _linkedListNthNode;
+
+        private LinkedListReverse _linkedListReverse;
 
         [TestInitialize]
         public void Initialise()
@@ -17,6 +20,8 @@ namespace LeetCode_UnitTests
             _linkedListCycleOne = new LinkedListCycle();
             _linkedListCycleTwo = new LinkedListCycle();
             _linkedListIntersection = new LinkedListIntersection();
+            _linkedListNthNode = new LinkedListNthNode();
+            _linkedListReverse = new LinkedListReverse();
         }
 
         [TestMethod]
@@ -133,6 +138,37 @@ namespace LeetCode_UnitTests
             _linkedListIntersection.HeadTwo.Next.Next.Next.Next.Next = new ListNode(5);
 
             Assert.AreEqual(_linkedListIntersection.GetIntersectionNode(_linkedListIntersection.HeadOne, _linkedListIntersection.HeadTwo).Val, expectedVal);
+        }
+
+        [TestMethod]
+        public void CheckForRemovalOfFirstNodeFromLast()
+        {
+            int expectedVal = 8;
+            ListNode expectedNode = new ListNode(expectedVal);
+
+            ListNode head = new ListNode(1);
+            head.Next = new ListNode(2);
+            head.Next.Next = new ListNode(3);
+            head.Next.Next.Next = expectedNode;
+
+            ListNode modifiedHead = _linkedListNthNode.RemoveNthFromEnd(head, 1);
+
+            while (modifiedHead.Next != null)
+            {
+                Assert.AreNotEqual(expectedNode, modifiedHead);
+                modifiedHead = modifiedHead.Next;
+            }
+        }
+
+        [TestMethod]
+        public void CheckForProperLinkedListReversal()
+        {
+            ListNode head = new ListNode(1);
+            head.Next = new ListNode(2);
+            head.Next.Next = new ListNode(3);
+
+            ListNode modifiedHead = _linkedListReverse.ReverseList(head);
+            Assert.AreEqual(modifiedHead, "3,2,1,");
         }
     }
 }
