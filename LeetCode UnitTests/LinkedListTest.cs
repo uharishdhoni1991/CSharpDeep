@@ -168,7 +168,7 @@ namespace LeetCode_UnitTests
             head.Next.Next = new ListNode(3);
 
             ListNode modifiedHead = _linkedListReverse.ReverseList(head);
-            Assert.AreEqual(modifiedHead, "3,2,1,");
+            Assert.AreEqual(modifiedHead.ToString(), "3,2,1");
         }
     }
 }

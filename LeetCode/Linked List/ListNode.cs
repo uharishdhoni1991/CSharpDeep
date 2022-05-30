@@ -13,9 +13,13 @@ namespace LeetCode.Linked_List
             StringBuilder toPrint = new StringBuilder();
             ListNode currentNode = this;
 
-            while (null != this)
+            while (currentNode != null)
             {
-                toPrint.Append(this.Val + ",");
+                toPrint.Append(currentNode.Val);
+
+                if (currentNode.Next != null)
+                    toPrint.Append(",");
+
                 currentNode = currentNode.Next;
             }
             return toPrint.ToString();

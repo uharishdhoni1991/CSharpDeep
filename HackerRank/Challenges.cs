@@ -91,5 +91,99 @@ namespace HackerRank
 
             return updatedGrades;
         }
+
+        internal void CountApplesAndOranges(
+            int houseStartingPoint,
+            int houseEndingPoint,
+            int appleTreeLocation,
+            int orangeTreeLocation,
+            List<int> apples,
+            List<int> oranges)
+        {
+            int appleCount = 0;
+
+            foreach (int apple in apples)
+            {
+                if (apple + appleTreeLocation >= houseStartingPoint && apple + appleTreeLocation <= houseEndingPoint)
+                    appleCount++;
+            }
+
+            int orangeCount = 0;
+
+            foreach (int orange in oranges)
+            {
+                if (orange + orangeTreeLocation >= houseStartingPoint && orange + orangeTreeLocation <= houseEndingPoint)
+                    orangeCount++;
+            }
+
+            Console.WriteLine(appleCount);
+            Console.WriteLine(orangeCount);
+        }
+
+        internal string KangarooJump(
+            int kangarooAStartPos,
+            int kangarooAVel,
+            int kangarooBStartPos,
+            int kangarooBVel)
+        {
+            var kangarooACantCatchUp = kangarooAStartPos < kangarooBStartPos && kangarooAVel < kangarooBVel;
+            var kangarooBCantCatchUp = kangarooBStartPos < kangarooAStartPos && kangarooBVel < kangarooAVel;
+
+            if (kangarooACantCatchUp || kangarooBCantCatchUp)            
+               return "NO";
+               
+
+            bool canCatchUp = false;
+
+            for(int i =0; i<=10000;i++)
+            {
+                kangarooAStartPos = kangarooAStartPos + kangarooAVel;
+                kangarooBStartPos = kangarooBStartPos + kangarooBVel;
+
+                if (kangarooAStartPos == kangarooBStartPos)
+                {
+                    canCatchUp = true;
+                    break;
+                }
+            }
+
+            return $"{(canCatchUp ? "YES" : "NO")}";
+        }
+
+        internal int GetTotalX(List<int> a, List<int> b)
+        {
+            int counter = 0;
+
+            for (int currentNum = 1; currentNum <= 100; currentNum++)
+            {
+                bool checkFlag = true;
+                for (int j = 0; j < a.Count; j++)
+                {
+                    if (currentNum % a[j] != 0)
+                    {
+                        checkFlag = false;
+                    }
+                }
+                if (checkFlag)
+                {
+                    bool checkx = CheckFactor(currentNum, b);
+                    if (checkx)
+                    {
+                        counter++;
+                    }
+                }
+            }
+            return counter;
+        }
+
+        private bool CheckFactor(int ax,List<int> b)
+        {
+            for (int i = 0; i < b.Count; i++)
+            {
+                if (b[i] % ax != 0)                
+                    return false;                
+            }
+            return true;
+        }
     }
 }

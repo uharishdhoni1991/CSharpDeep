@@ -2,11 +2,13 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace HackerRank_UnitTests
 {
     [TestClass]
-    public class HackerRankChallenges
+    public class HackerRankChallengeTests
     {
         Challenges _hackerRankChallenges;
 
@@ -94,5 +96,40 @@ namespace HackerRank_UnitTests
 
             CollectionAssert.AreEqual(expectedList, actualList);
         }
+
+        [TestMethod]
+        public void TestApplesAndOranges()
+        {
+            var expected = "1\r\n1\r\n";
+
+            var stringWriter = new StringWriter();
+            Console.SetOut(stringWriter);
+
+            _hackerRankChallenges.CountApplesAndOranges(7, 11, 5, 15, new List<int> { -2, 2, 1 }, new List<int> { 5, -6 });
+
+            var actual = stringWriter.ToString();
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void TestKangarooJumpWontCoincidence()
+        {
+            var expected = "NO";            
+
+            string actual = _hackerRankChallenges.KangarooJump(0, 2, 5, 3);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void TestBetweenTwoSets()
+        {
+            List<int> arr = new List<int> { 2, 4};
+            List<int> brr = new List<int> { 16, 32, 96};
+
+            int total = _hackerRankChallenges.GetTotalX(arr, brr);
+
+            Assert.AreEqual(total, 3);
+        }    
     }
 }
