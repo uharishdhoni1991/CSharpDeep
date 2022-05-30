@@ -35,4 +35,4 @@ jobs:
        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
        
     - name: Build Solution
-      run: msbuild CSharp.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile   
+      run: msbuild CSharp.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile /p:VisualStudioVersion=16.0
