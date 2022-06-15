@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Arrays
 {
-	public class ArrayFunc
+    public class ArrayFunc
 	{
 		internal int FindMaxConsecutiveOnes(int[] nums)
 		{
@@ -396,6 +394,78 @@ namespace Arrays
             }
 
 			return nums.Take(j).ToList();
+		}
+
+		public bool ContainsDuplicateHashsetVersion(int[] nums)
+		{
+			bool containsDuplicate = false;
+			int numsCount = nums.Count();
+
+			if (numsCount < 0 || numsCount > Math.Pow(10, 5))
+				return containsDuplicate;
+
+			for (int i = 0; i < numsCount; i++)
+            {		
+				for (int j = i + 1; j < numsCount; j++)
+				{
+					containsDuplicate = containsDuplicate || nums[i] == nums[j];
+
+					if (containsDuplicate)
+						break;
+				}
+
+				if (containsDuplicate)
+					break;
+            }
+
+			return containsDuplicate;
+        }
+
+		public bool ContainsDuplicateHashTableVersion(int[] nums)
+        {
+			HashSet<int> hashSet = new HashSet<int>();
+
+			for(int i=0; i<nums.Length;i++)
+            {
+				if(!hashSet.Add(nums[i]))                
+					return true;                
+            }
+
+			return false;
+        }
+
+		public bool ContainsDuplicateSortedArrayVersion(int[] nums)
+		{
+			int[] sortedArray = nums.OrderBy(num => num).ToArray();
+
+			for (int i = 0; i < nums.Length - 1; i++)
+			{
+				if (sortedArray[i] == sortedArray[i + 1])
+					return true;
+			}
+
+			return false;
+		}
+
+		public int MissingNumber(int[] nums)
+		{
+			if (nums.Count() < 1 && nums.Count() > Math.Pow(10, 4))
+				return 0;
+
+			int[] sortedArray = nums.OrderBy(num => num).ToArray();
+
+			if (sortedArray[nums.Count() -1] != nums.Count())
+				return nums.Count();
+
+			for (int i = nums.Count() - 1; i >= 0; i--)
+			{
+				if (i - 1 < 0)
+					return 0;				
+				else if (!(sortedArray[i] == sortedArray[i - 1] + 1))
+					return sortedArray[i] - 1;
+			}
+
+			return 0;
 		}
 
 		private int FindNoOfDigits(int number, int noOfDigits)
