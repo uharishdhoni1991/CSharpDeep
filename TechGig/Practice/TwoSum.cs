@@ -15,9 +15,40 @@ namespace TechGig.Practice
                 inputArray[i] = Convert.ToInt32(elementArray[i]);
             }
 
-            int[] requiredIndices = FindTowSum(inputArray, 8);
+            int[] requiredIndices = FindTwoSum(inputArray, 8);
         }
 
+        [TimeNLogN]
+        int[] FindTwoSum(int[] numbers, int target)
+         {
+            int[] outputArray = new int[2];
+            int reversePointer = numbers.Length - 1;
+            int forwardPointer = 0;
+
+            Array.Sort(numbers);
+
+            for(int i=0; i < numbers.Length; i++)
+            {
+                if(numbers[forwardPointer] + numbers[reversePointer] == target)
+                {
+                    outputArray[0] = numbers[forwardPointer];
+                    outputArray[1] = numbers[reversePointer];
+                    break;
+                }
+                else if(numbers[forwardPointer] + numbers[reversePointer] > target)
+                {
+                    reversePointer--;
+                }
+                else if(numbers[forwardPointer] + numbers[reversePointer] < target)
+                {
+                    forwardPointer++;
+                }
+            }
+
+            return outputArray;
+        }
+
+        [TimeN2]
         int[] FindTowSum(int[] numbers, int target)
         {
             int[] outputArray = new int[2];

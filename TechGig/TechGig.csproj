@@ -64,6 +64,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Practice\SmallestSubArraySort.cs" />
     <Compile Include="Practice\TwoSum.cs" />
+    <Compile Include="TimeN2.cs" />
+    <Compile Include="TimeNLogN.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
