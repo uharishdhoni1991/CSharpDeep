@@ -60,6 +60,8 @@
     <Compile Include="Practice\RollAMatrix.cs" />
     <Compile Include="Practice\SecondLargestArrayElement.cs" />
     <Compile Include="Practice\SICalculation.cs" />
+    <Compile Include="Practice\TimeN.cs" />
+    <Compile Include="Practice\TournamentWinner.cs" />
     <Compile Include="Practice\ValidatingSubSequence.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
