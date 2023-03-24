@@ -57,6 +57,7 @@
     <Compile Include="Practice\MatrixAddition.cs" />
     <Compile Include="Practice\MatrixBase.cs" />
     <Compile Include="Practice\PrimeNoInRange.cs" />
+    <Compile Include="Practice\ProductSum.cs" />
     <Compile Include="Practice\RollAMatrix.cs" />
     <Compile Include="Practice\SecondLargestArrayElement.cs" />
     <Compile Include="Practice\SICalculation.cs" />
