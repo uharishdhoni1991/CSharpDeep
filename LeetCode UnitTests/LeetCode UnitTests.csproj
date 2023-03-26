@@ -52,12 +52,17 @@
     <Compile Include="ArrayTest.cs" />
     <Compile Include="FindDissapearingNumbersTest.cs" />
     <Compile Include="LinkedListTest.cs" />
+    <Compile Include="LinkedListV2Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LeetCodeV2\LeetCodeV2.csproj">
+      <Project>{bf113ebe-dfc4-4454-990e-2ad394f60860}</Project>
+      <Name>LeetCodeV2</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LeetCode\LeetCode.csproj">
       <Project>{46e3318d-c1a9-422d-925d-7b39a13ff520}</Project>
       <Name>LeetCode</Name>
