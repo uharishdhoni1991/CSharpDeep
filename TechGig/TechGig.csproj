@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Practice\CompareDiagonals.cs" />
     <Compile Include="Practice\ConsecutiveNumbers.cs" />
+    <Compile Include="Practice\MinimumWaitingTime.cs" />
     <Compile Include="Practice\NotConstrutibleChange.cs" />
     <Compile Include="Practice\PasswordEnhancer.cs" />
     <Compile Include="Practice\PlayWithAverages.cs" />
