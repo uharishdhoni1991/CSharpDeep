@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Daily Problems\ReducingDishes.cs" />
     <Compile Include="Models\MyLinkedList.cs" />
     <Compile Include="Models\SingleLinkedNode.cs" />
     <Compile Include="Program.cs" />
@@ -50,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Description.MD" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

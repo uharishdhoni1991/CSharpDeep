@@ -11,6 +11,7 @@ namespace TechGig.Practice
             int mwt = GetMinimumWaitingTime(input);
         }
 
+        [TimeN]
         public int GetMinimumWaitingTime(int[] input)
         {
             /*Hint 

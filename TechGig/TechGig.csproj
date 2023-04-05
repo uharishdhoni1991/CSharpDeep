@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Practice\CompareDiagonals.cs" />
     <Compile Include="Practice\ConsecutiveNumbers.cs" />
+    <Compile Include="Practice\GenerateDocument.cs" />
     <Compile Include="Practice\MinimumWaitingTime.cs" />
     <Compile Include="Practice\NotConstrutibleChange.cs" />
     <Compile Include="Practice\PasswordEnhancer.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="Practice\ProductSum.cs" />
     <Compile Include="Practice\RollAMatrix.cs" />
     <Compile Include="Practice\SecondLargestArrayElement.cs" />
+    <Compile Include="Practice\Semornilap.cs" />
     <Compile Include="Practice\SICalculation.cs" />
     <Compile Include="Practice\TimeN.cs" />
     <Compile Include="Practice\TournamentWinner.cs" />
@@ -75,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Practice.md" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ChallengesDescription.md" />

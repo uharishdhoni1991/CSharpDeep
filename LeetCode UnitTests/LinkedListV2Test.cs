@@ -1,4 +1,5 @@
-﻿using LeetCodeV2.Models;
+﻿using LeetCodeV2.Daily_Problems;
+using LeetCodeV2.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LeetCode_UnitTests
@@ -36,6 +37,17 @@ namespace LeetCode_UnitTests
             string listString = myLinkedList.ToString();
             string expected = "-1--3--4-";
             Assert.AreEqual(listString, expected);
+        }
+
+        [TestMethod]
+        public void CheckMaxSatisfaction()
+        {
+            ReducingDishes red = new ReducingDishes();
+            int max = red.MaxSatisfaction(new int[] { -1, -8, 0, 5, -9 });
+            Assert.AreEqual(max, 14);
+
+            int max1 = red.MaxSatisfaction(new int[] { 1, 0, -1, -8, -9 });
+            Assert.AreEqual(max1, 2);
         }
     }
 }
