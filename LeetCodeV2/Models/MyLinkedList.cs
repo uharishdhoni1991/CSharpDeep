@@ -102,6 +102,28 @@ namespace LeetCodeV2.Models
             return (head.Val == val) ? head.Next : head;
         }
 
+        public SingleListNode OddEvenLinkedList(SingleListNode head)
+        {
+            if (head == null || head.Next == null)
+                return head;
+
+            SingleListNode oddPointer = head;
+            SingleListNode evenPointer = head.Next;
+            SingleListNode even = head.Next;
+
+            while (evenPointer != null || evenPointer.Next != null)
+            {
+                oddPointer.Next = evenPointer.Next;
+                oddPointer = oddPointer.Next;
+                evenPointer.Next = evenPointer.Next;
+                evenPointer = evenPointer.Next;               
+            }
+
+            oddPointer.Next = even;
+
+            return oddPointer;
+        }
+
         public override string ToString()
         {
             StringBuilder listString = new StringBuilder();
