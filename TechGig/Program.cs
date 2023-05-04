@@ -58,7 +58,7 @@ namespace TechGig
             //IExecute compareDiagonals = new CompareDiagonals();
             //compareDiagonals.Execute();
 
-            IExecute find = new TandemBicycle();
+            IExecute find = new ThreeLargestIntegers();
             find.Execute();
         }
     }

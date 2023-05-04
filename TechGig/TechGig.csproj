@@ -67,6 +67,7 @@
     <Compile Include="Practice\Semornilap.cs" />
     <Compile Include="Practice\SICalculation.cs" />
     <Compile Include="Practice\TandemBicycle.cs" />
+    <Compile Include="Practice\ThreeLargestIntegers.cs" />
     <Compile Include="Practice\TimeN.cs" />
     <Compile Include="Practice\TournamentWinner.cs" />
     <Compile Include="Practice\ValidatingSubSequence.cs" />
