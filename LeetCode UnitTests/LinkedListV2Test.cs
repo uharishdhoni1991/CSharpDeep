@@ -64,5 +64,53 @@ namespace LeetCode_UnitTests
             string expected = "-1--3--5--2--4-";
             Assert.AreEqual(expected, node.ToString());
         }
+
+        [TestMethod]
+        public void SearchInRotatedSortedArrray()
+        {
+            SearchInRotatedSortedArray sIRA = new SearchInRotatedSortedArray();
+
+            int[] nums = new int[] { 4, 5, 6, 7, 0, 1, 2 };
+            int expected = 4;
+            int actual = sIRA.Search(nums, 0);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void SearchInRotatedSortedArrraySingleInput()
+        {
+            SearchInRotatedSortedArray sIRA = new SearchInRotatedSortedArray();
+
+            int[] nums = new int[] { 1 };
+            int expected = 0;
+            int actual = sIRA.Search(nums, 1);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void SearchInRotatedSortedArrrayDoubleInput()
+        {
+            SearchInRotatedSortedArray sIRA = new SearchInRotatedSortedArray();
+
+            int[] nums = new int[] { 1, 3 };
+            int expected = 1;
+            int actual = sIRA.Search(nums, 3);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void SearchInRotatedSortedArrrayTripleInput()
+        {
+            SearchInRotatedSortedArray sIRA = new SearchInRotatedSortedArray();
+
+            int[] nums = new int[] { 1, 3, 5};
+            int expected = 2;
+            int actual = sIRA.Search(nums, 5);
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

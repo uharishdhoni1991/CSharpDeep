@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Daily Problems\ReducingDishes.cs" />
+    <Compile Include="Daily Problems\SearchInRotatedSortedArray.cs" />
     <Compile Include="Models\MyLinkedList.cs" />
     <Compile Include="Models\SingleLinkedNode.cs" />
     <Compile Include="Program.cs" />
