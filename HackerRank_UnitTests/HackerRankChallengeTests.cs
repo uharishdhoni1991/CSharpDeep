@@ -131,5 +131,15 @@ namespace HackerRank_UnitTests
 
             Assert.AreEqual(total, 3);
         }    
+
+        [TestMethod]
+        public void TestReversedNumber()
+        {
+            int number = 109;
+
+            double reversed = _hackerRankChallenges.ReverseInt(number);
+
+            Assert.AreEqual(901, reversed);
+        }
     }
 }

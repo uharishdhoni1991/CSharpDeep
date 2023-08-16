@@ -185,5 +185,27 @@ namespace HackerRank
             }
             return true;
         }
+
+        internal double ReverseInt(int a)
+        {
+            List<int> array = new List<int>();
+            int i = 0;
+
+            while(a > 0)
+            {                
+                array.Add(a % 10);
+                a = a / 10;
+                i++;
+            }
+
+            double reversedNum = 0;
+
+            for(int j = 0;j < array.Count; j++)
+            {
+                reversedNum += array[j] * Math.Pow(10, array.Count - j - 1);
+            }
+
+            return reversedNum;
+        }
     }
 }
