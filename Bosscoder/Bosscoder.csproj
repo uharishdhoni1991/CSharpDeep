@@ -47,6 +47,10 @@
     <Compile Include="Models\TimeN.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Week1\Assignment Questions\MaxAbsValueExp.cs" />
+    <Compile Include="Week1\Assignment Questions\MaxGapProblem.cs" />
+    <Compile Include="Week1\Assignment Questions\SpiralMatrix.cs" />
+    <Compile Include="Week1\Assignment Questions\WaterTrappingProblem.cs" />
     <Compile Include="Week1\Warmup Assignments\ArrayConcatenation.cs" />
     <Compile Include="Week1\Warmup Assignments\FizzBuzz.cs" />
     <Compile Include="Week1\Warmup Assignments\MatrixDiagonalSum.cs" />
@@ -59,5 +63,6 @@
   <ItemGroup>
     <Content Include="Images\array-icon-512x512-slztyf8v.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
