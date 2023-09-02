@@ -1,4 +1,5 @@
 ﻿using Arrays;
+using LeetCodeV2.Daily_Problems;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Linq;
@@ -106,6 +107,51 @@ namespace LeetCode_UnitTests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void CountNoOfOnesTest()
+        {
+            CountingNoOfOnes countingNoOfOnes = new CountingNoOfOnes();
+
+            int num = 5;
+            int[] expected = new int[] { 0, 1, 1, 2, 1, 1 };
+
+            int[] actual = countingNoOfOnes.CountNoOfOnes(num);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void IsPalindromeTest()
+        {
+            IsPalindromeNumber isPalindromeNumber = new IsPalindromeNumber();
+
+            int num = 121;
+            bool expected = true;
+
+            bool actual = isPalindromeNumber.IsPalindrome(num);
+            Assert.AreEqual(expected, actual);
+
+            int num1 = -121;
+            bool expected1 = false;
+
+            bool actual1 = isPalindromeNumber.IsPalindrome(num1);
+            Assert.AreEqual(expected1, actual1);
+
+            int num2 = 10;
+            bool expected2 = false;
+
+            bool actual2 = isPalindromeNumber.IsPalindrome(num2);
+            Assert.AreEqual(expected2, actual2);
+        }
+
+        [TestMethod]
+        public void RomanToNumberTest()
+        {
+            string s = "IV";
+            int expected = 4;
+
+            int actual = _arrayFunc.ConvertRomanToNumber(s);
+            Assert.AreEqual(expected, actual);
+        }
 
         private int[] GenerateNumbers()
         {

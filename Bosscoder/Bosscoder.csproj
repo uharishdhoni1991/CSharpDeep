@@ -51,6 +51,10 @@
     <Compile Include="Week1\Assignment Questions\MaxGapProblem.cs" />
     <Compile Include="Week1\Assignment Questions\SpiralMatrix.cs" />
     <Compile Include="Week1\Assignment Questions\WaterTrappingProblem.cs" />
+    <Compile Include="Week1\Homework Questions\LongestSubArrayWithMaxLength.cs" />
+    <Compile Include="Week1\Homework Questions\MaxSubArrayProb.cs" />
+    <Compile Include="Week1\Homework Questions\Permutations.cs" />
+    <Compile Include="Week1\Homework Questions\SetMatrixZeroes.cs" />
     <Compile Include="Week1\Warmup Assignments\ArrayConcatenation.cs" />
     <Compile Include="Week1\Warmup Assignments\FizzBuzz.cs" />
     <Compile Include="Week1\Warmup Assignments\MatrixDiagonalSum.cs" />

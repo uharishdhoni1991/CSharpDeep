@@ -468,6 +468,58 @@ namespace Arrays
 			return 0;
 		}
 
+		public int ConvertRomanToNumber(string s)
+		{
+			int num = 0;
+			char prev = 'O';
+			char[] chars = s.ToCharArray();
+
+			for (int i = chars.Length - 1; i >= 0; i--)
+			{
+				char c = chars[i];
+
+				if (c == 'M')				
+					num += 1000;					
+				else if (c == 'D')				
+					num += 500;
+				else if (c == 'C')
+				{
+					if (prev == 'D')
+						num -= 100;
+					else if (prev == 'M')
+						num -= 100;
+					else
+						num += 100;		
+				}
+				else if (c == 'L')				
+					num += 50;
+				else if (c == 'X')
+				{
+					if (prev == 'L')
+						num -= 10;
+					else if(prev == 'C')
+						num -= 10;
+					else
+						num += 10;					
+				}
+				else if (c == 'V')				
+					num += 5;				
+				else if (c == 'I')
+				{
+					if (prev == 'V')
+						num -= 1;
+					else if (prev == 'X')
+						num -= 1;
+					else
+						num += 1;
+				}
+
+				prev = c;
+			}
+
+			return num;
+		}
+
 		private int FindNoOfDigits(int number, int noOfDigits)
 		{
 			if (number < 1 && number > Math.Pow(10, 5))
@@ -483,6 +535,6 @@ namespace Arrays
 				noOfDigits = 0;
 
 			return noOfDigits;
-		}
+		}		
 	}
 }

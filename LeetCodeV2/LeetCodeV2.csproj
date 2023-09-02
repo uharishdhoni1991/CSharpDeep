@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Daily Problems\CountingNoOfOnes.cs" />
+    <Compile Include="Daily Problems\IsPalindromeNumber.cs" />
     <Compile Include="Daily Problems\ReducingDishes.cs" />
     <Compile Include="Daily Problems\SearchInRotatedSortedArray.cs" />
     <Compile Include="Models\MyLinkedList.cs" />
