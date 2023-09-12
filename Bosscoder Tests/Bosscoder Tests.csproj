@@ -49,9 +49,10 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Week1\Assignment Questions\AssignmentTests.cs" />
-    <Compile Include="Week1\Homework Questions\HomeworkTests.cs" />
-    <Compile Include="Week1\Warmup Assignments\WarmupTests.cs" />
+    <Compile Include="Helpers.cs" />
+    <Compile Include="All\Assignment Questions\AssignmentTests.cs" />
+    <Compile Include="All\Homework Questions\HomeworkTests.cs" />
+    <Compile Include="All\Warmup Assignments\WarmupTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

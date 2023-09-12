@@ -43,10 +43,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mentorship\SortArrayWithTwoNumbers.cs" />
+    <Compile Include="Models\TimeLimitExceeded.cs" />
     <Compile Include="Models\TimeLogN.cs" />
     <Compile Include="Models\TimeN.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Week 2\Assignment Questions\SubmatrixSum.cs" />
+    <Compile Include="Week 2\Homework Questions\ArrangePositiveAndNegativeNumbers.cs" />
+    <Compile Include="Week 2\Homework Questions\CountNegativeNumbersInASortedMatrix.cs" />
+    <Compile Include="Week 2\Assignment Questions\MaxChunksToSorted.cs" />
+    <Compile Include="Week 2\Assignment Questions\RangeSumInTwoDimensionalMatrix.cs" />
+    <Compile Include="Week 2\Assignment Questions\SearchTwoDimensionalMatrix.cs" />
+    <Compile Include="Week 2\Homework Questions\MatrixDiagonalSum.cs" />
+    <Compile Include="Week 2\Homework Questions\MaxChunksToSortedII.cs" />
+    <Compile Include="Week 2\Homework Questions\MinimumSwapsRequired.cs" />
+    <Compile Include="Week 2\Homework Questions\ReshapeMatrix.cs" />
+    <Compile Include="Week 2\Homework Questions\TransposeMatrix.cs" />
+    <Compile Include="Week 2\Warmup Questions\SingleToTwoDimensionalArray.cs" />
+    <Compile Include="Week 2\Warmup Questions\RichestCustomerWealth.cs" />
+    <Compile Include="Week 2\Warmup Questions\RunningSum.cs" />
+    <Compile Include="Week 2\Warmup Questions\SpecialPositionsInMatrix.cs" />
+    <Compile Include="Week 3\Assignment Questions\PairsDivisibleByK.cs" />
+    <Compile Include="Week 3\Assignment Questions\UniquePaths.cs" />
+    <Compile Include="Week 3\Warmup Questions\CountOfMatchesInTournament.cs" />
+    <Compile Include="Week 3\Warmup Questions\GoodPairsCount.cs" />
+    <Compile Include="Week 3\Warmup Questions\GreatestCommonDivisor.cs" />
+    <Compile Include="Week 3\Warmup Questions\MaxConsecutiveOnes.cs" />
+    <Compile Include="Week 3\Warmup Questions\SelfDividingNumbers.cs" />
+    <Compile Include="Week 3\Warmup Questions\SubstractProductAndSum.cs" />
     <Compile Include="Week1\Assignment Questions\MaxAbsValueExp.cs" />
     <Compile Include="Week1\Assignment Questions\MaxGapProblem.cs" />
     <Compile Include="Week1\Assignment Questions\SpiralMatrix.cs" />
