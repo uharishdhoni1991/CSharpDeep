@@ -1,0 +1,45 @@
+﻿Bit Manipulation
+
+137 :  Single Number
+Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+You must implement a solution with a linear runtime complexity and use only constant extra space.
+
+Constraints:
+-> 1 <= nums.length <= 3*104
+-> -3*104 <= nums[i] <= 3*104
+
+260 : Single NUmber 3
+Given an integer array nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once. You can return the answer in any order.
+You must write an algorithm that runs in linear runtime complexity and uses only constant extra space.
+
+Constraints:
+
+2 <= nums.length <= 3 * 104
+-231 <= nums[i] <= 231 - 1
+Each integer in nums will appear twice, only two integers will appear once.
+
+34 : Find First and Last Position of Element in Sorted Array
+
+Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.
+If target is not found in the array, return [-1, -1].
+You must write an algorithm with O(log n) runtime complexity.
+
+Constraints:
+
+0 <= nums.length <= 105
+-109 <= nums[i] <= 109
+nums is a non-decreasing array.
+-109 <= target <= 109
+
+540. Single Element in a Sorted Array 
+
+You are given a sorted array consisting of only integers where every element appears exactly twice, except for one element which appears exactly once.
+
+Return the single element that appears only once.
+
+Your solution must run in O(log n) time and O(1) space.
+
+Constraints:
+
+1 <= nums.length <= 105
+0 <= nums[i] <= 105

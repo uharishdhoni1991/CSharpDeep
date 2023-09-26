@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="General\BinarySearch.cs" />
     <Compile Include="Mentorship\SortArrayWithTwoNumbers.cs" />
     <Compile Include="Models\TimeLimitExceeded.cs" />
     <Compile Include="Models\TimeLogN.cs" />
@@ -64,14 +65,44 @@
     <Compile Include="Week 2\Warmup Questions\RichestCustomerWealth.cs" />
     <Compile Include="Week 2\Warmup Questions\RunningSum.cs" />
     <Compile Include="Week 2\Warmup Questions\SpecialPositionsInMatrix.cs" />
+    <Compile Include="Week 3\Assignment Questions\CheckIfPairsDivisibleByK.cs" />
+    <Compile Include="Week 3\Homework Questions\CountTrailingZeroesInFactorial.cs" />
+    <Compile Include="Week 3\Assignment Questions\LargestCoPrime.cs" />
+    <Compile Include="Week 3\Assignment Questions\NoOfOpenDoors.cs" />
+    <Compile Include="Week 3\Assignment Questions\NumberOfSubsequencesWhoseSumIsDivisibleByK.cs" />
     <Compile Include="Week 3\Assignment Questions\PairsDivisibleByK.cs" />
+    <Compile Include="Week 3\Assignment Questions\Rand10FromRand7.cs" />
+    <Compile Include="Week 3\Assignment Questions\SumOfDivisorsOnlyIfTotalDivisorsIsFour.cs" />
+    <Compile Include="Week 3\Assignment Questions\TotalNumberOfDivisors.cs" />
     <Compile Include="Week 3\Assignment Questions\UniquePaths.cs" />
+    <Compile Include="Week 3\Homework Questions\FindNthMagicalNumber.cs" />
+    <Compile Include="Week 3\Homework Questions\NthMagicalNumber.cs" />
+    <Compile Include="Week 3\Homework Questions\PeopleInQueue.cs" />
+    <Compile Include="Week 3\Assignment Questions\RectangleArea.cs" />
+    <Compile Include="Week 3\Homework Questions\PermutationSequence.cs" />
+    <Compile Include="Week 3\Homework Questions\RectangleOverlap.cs" />
     <Compile Include="Week 3\Warmup Questions\CountOfMatchesInTournament.cs" />
     <Compile Include="Week 3\Warmup Questions\GoodPairsCount.cs" />
     <Compile Include="Week 3\Warmup Questions\GreatestCommonDivisor.cs" />
     <Compile Include="Week 3\Warmup Questions\MaxConsecutiveOnes.cs" />
     <Compile Include="Week 3\Warmup Questions\SelfDividingNumbers.cs" />
     <Compile Include="Week 3\Warmup Questions\SubstractProductAndSum.cs" />
+    <Compile Include="Week 4\Assignment Questions\FindPeakElement.cs" />
+    <Compile Include="Week 4\Assignment Questions\FirstLastSortedPosition.cs" />
+    <Compile Include="Week 4\Assignment Questions\NumberOf1Bits.cs" />
+    <Compile Include="Week 4\Assignment Questions\ReverseBits.cs" />
+    <Compile Include="Week 4\Assignment Questions\SingleNonDuplicate.cs" />
+    <Compile Include="Week 4\Assignment Questions\SingleNum2.cs" />
+    <Compile Include="Week 4\Assignment Questions\SingleNumber.cs" />
+    <Compile Include="Week 4\Assignment Questions\SearchInRotatedSortedArray.cs" />
+    <Compile Include="Week 4\Assignment Questions\SingleNumber3.cs" />
+    <Compile Include="Week 4\Homework Questions\BitDifferences.cs" />
+    <Compile Include="Week 4\Homework Questions\CheckIfArrayCanBeMadeSingleElementAsZero.cs" />
+    <Compile Include="Week 4\Homework Questions\DivideTwoIntegers.cs" />
+    <Compile Include="Week 4\Homework Questions\HammingDistance.cs" />
+    <Compile Include="Week 4\Homework Questions\PreImageSize.cs" />
+    <Compile Include="Week 4\Homework Questions\Search2DMatrix.cs" />
+    <Compile Include="Week 4\Homework Questions\XORQueries.cs" />
     <Compile Include="Week1\Assignment Questions\MaxAbsValueExp.cs" />
     <Compile Include="Week1\Assignment Questions\MaxGapProblem.cs" />
     <Compile Include="Week1\Assignment Questions\SpiralMatrix.cs" />
@@ -87,10 +118,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Week 4\Homework Questions\README.MD" />
     <None Include="Week1\README.MD" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\array-icon-512x512-slztyf8v.png" />
+    <None Include="Week 4\Assignment Questions\README,MD" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

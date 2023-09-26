@@ -5,8 +5,7 @@
         public int[][] GetMatrixTranspose(int[][] matrix)
         {
             int row = 0, col = 0, colLength = matrix[row].Length;
-            int[][] matrix2 = new int[colLength][];
-            int j = 0;
+            int[][] matrix2 = new int[colLength][];          
 
             for (int i = 0; i < matrix2.Length; i++)            
                 matrix2[i] = new int[matrix.Length];             
