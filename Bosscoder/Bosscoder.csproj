@@ -44,10 +44,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="General\BinarySearch.cs" />
+    <Compile Include="Mentorship\AmitAttribute.cs" />
+    <Compile Include="Mentorship\Recursion.cs" />
     <Compile Include="Mentorship\SortArrayWithTwoNumbers.cs" />
+    <Compile Include="Mentorship\TwoSum.cs" />
+    <Compile Include="Models\Node.cs" />
     <Compile Include="Models\TimeLimitExceeded.cs" />
     <Compile Include="Models\TimeLogN.cs" />
     <Compile Include="Models\TimeN.cs" />
+    <Compile Include="Models\TimeN2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Week 2\Assignment Questions\SubmatrixSum.cs" />
@@ -103,6 +108,47 @@
     <Compile Include="Week 4\Homework Questions\PreImageSize.cs" />
     <Compile Include="Week 4\Homework Questions\Search2DMatrix.cs" />
     <Compile Include="Week 4\Homework Questions\XORQueries.cs" />
+    <Compile Include="Week 5\Assignment Questions\AnagramString.cs" />
+    <Compile Include="Week 5\Assignment Questions\CapacityToShipPackages.cs" />
+    <Compile Include="Week 5\Assignment Questions\FindLengthOfLargestSubarrayWithZeroSum.cs" />
+    <Compile Include="Week 5\Assignment Questions\LongestConsecutiveSequence.cs" />
+    <Compile Include="Week 5\Assignment Questions\Sudoku.cs" />
+    <Compile Include="Week 5\Homework Questions\ContainerWithMostWater.cs" />
+    <Compile Include="Week 5\Assignment Questions\CountOfNumbersAfterSelf.cs" />
+    <Compile Include="Week 5\Homework Questions\FindKClosestElements.cs" />
+    <Compile Include="Week 5\Homework Questions\FindKPairsWithSmallestSums.cs" />
+    <Compile Include="Week 5\Assignment Questions\InputArraySorted.cs" />
+    <Compile Include="Week 5\Assignment Questions\KDiffPairs.cs" />
+    <Compile Include="Week 5\Assignment Questions\KthLargestElement.cs" />
+    <Compile Include="Week 5\Assignment Questions\MagneticForceBetweenBalls.cs" />
+    <Compile Include="Week 5\Assignment Questions\MinimizeExpOfThreeSortedArrays.cs" />
+    <Compile Include="Week 5\Assignment Questions\ReversePairs.cs" />
+    <Compile Include="Week 5\Assignment Questions\SmallestBase.cs" />
+    <Compile Include="Week 5\Assignment Questions\SortColours.cs" />
+    <Compile Include="Week 5\Assignment Questions\UglyNumber2.cs" />
+    <Compile Include="Week 5\Homework Questions\ValidTriangleNumber.cs" />
+    <Compile Include="Week 6\Assignment Questions\LongestSubstringWithoutRepeatingChars.cs" />
+    <Compile Include="Week 6\Assignment Questions\MinimumWindowSubstring.cs" />
+    <Compile Include="Week 6\Assignment Questions\PalindromePairs.cs" />
+    <Compile Include="Week 6\Homework Questions\DesignHashMap.cs" />
+    <Compile Include="Week 6\Homework Questions\FindPairSumInArray.cs" />
+    <Compile Include="Week 6\Homework Questions\SetMatrixZeroes.cs" />
+    <Compile Include="Week 7_StacksAndQueues\Assignement Questions\DailyTemperatures.cs" />
+    <Compile Include="Week 7_StacksAndQueues\Assignement Questions\EvalRevPolishNotation.cs" />
+    <Compile Include="Week 7_StacksAndQueues\Assignement Questions\ExoressionContainRedundantBracket.cs" />
+    <Compile Include="Week 7_StacksAndQueues\Assignement Questions\GasStation.cs" />
+    <Compile Include="Week 7_StacksAndQueues\Assignement Questions\ImplementQueueUsingStack.cs" />
+    <Compile Include="Week 7_StacksAndQueues\Assignement Questions\ImplementStackUsingQueue.cs" />
+    <Compile Include="Week 7_StacksAndQueues\Assignement Questions\LargestRectangleHistogram.cs" />
+    <Compile Include="Week 7_StacksAndQueues\Assignement Questions\LongestValidParantheses.cs" />
+    <Compile Include="Week 7_StacksAndQueues\Assignement Questions\MinStack.cs" />
+    <Compile Include="Week 7_StacksAndQueues\Assignement Questions\SlidingWindowMaximum.cs" />
+    <Compile Include="Week 8_LinkedList\Assignment Questions\DesignLinkedList.cs" />
+    <Compile Include="Week 8_LinkedList\Homework Questions\KokoEatingBananas.cs" />
+    <Compile Include="Week 8_LinkedList\Homework Questions\LetterCombinationInPhoneNumber.cs" />
+    <Compile Include="Week 8_LinkedList\Homework Questions\MaxProfitAssignment.cs" />
+    <Compile Include="Week 8_LinkedList\Homework Questions\MaxUnitsOnATruck.cs" />
+    <Compile Include="Week 8_LinkedList\Homework Questions\SumOfTwoIntegers.cs" />
     <Compile Include="Week1\Assignment Questions\MaxAbsValueExp.cs" />
     <Compile Include="Week1\Assignment Questions\MaxGapProblem.cs" />
     <Compile Include="Week1\Assignment Questions\SpiralMatrix.cs" />
@@ -119,6 +165,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Week 4\Homework Questions\README.MD" />
+    <None Include="Week 5\README.MD" />
     <None Include="Week1\README.MD" />
   </ItemGroup>
   <ItemGroup>

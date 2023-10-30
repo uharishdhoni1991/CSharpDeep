@@ -2,9 +2,15 @@
 using Bosscoder.Week_3.Assignment_Questions;
 using Bosscoder.Week_3.Homework_Questions;
 using Bosscoder.Week_4.Homework_Questions;
+using Bosscoder.Week_5.Homework_Questions;
+using Bosscoder.Week_6.Homework_Questions;
+using Bosscoder.Week_8_LinkedList;
+using Bosscoder.Week_8_LinkedList.HomeWork_Questions;
 using Bosscoder.Week1.Homework_Questions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Bosscoder_Tests.Homework_Questions
 {
@@ -329,6 +335,183 @@ namespace Bosscoder_Tests.Homework_Questions
 
             int expected = 5;
             int actual = preImageSize.PreImageSizeFZF(0);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ContainerWithMostWaterTest()
+        {
+            ContainerWithMostWater containerWithMostWater = new ContainerWithMostWater();
+
+            int[] input = new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
+            int expected = 49;
+
+            int actual = containerWithMostWater.Solve(input);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ValidTriangleNumberTest()
+        {
+            ValidTriangleNumber validTriangleNumber = new ValidTriangleNumber();
+
+            int[] input = new int[] { 2, 2, 3, 4 };
+            int expected = 3;
+
+            int actual = validTriangleNumber.GetCount(input);
+            Assert.AreEqual(expected, actual);
+
+            input = new int[] { 4, 2, 3, 4 };
+            expected = 4;
+
+            actual = validTriangleNumber.GetCount(input);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void KClosestNumbersTest()
+        {
+            FindKClosestElements findKClosestElements = new FindKClosestElements();
+            int[] input = new int[] { 1, 2, 3, 4, 5 };
+
+            int[] expected = new int[] { 1, 2, 3, 4 };
+            int[] actual = findKClosestElements.Solve(input, 4, 3);
+
+            CollectionAssert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void KpairsWithSmallSUmTest()
+        {
+            FindKPairsWithSmallestSums findKPairs = new FindKPairsWithSmallestSums();
+            int[] input = new int[] { 1, 7, 11 };
+            int[] input2 = new int[] { 2, 4, 6 };
+
+            List<List<int>> expected = new List<List<int>>()
+            {
+                new List<int>(){1,2},
+                new List<int>(){1,4},
+                new List<int>(){1,6}
+            };
+
+            var actual = findKPairs.Solve(input, input2, 3);
+
+            for (int i = 0; i < expected.Count; i++)
+            {
+                Assert.AreEqual(expected[i][0], actual[i][0]);
+                Assert.AreEqual(expected[i][1], actual[i][1]);
+            }
+        }
+
+        [TestMethod]
+        public void HashMapDesignTest()
+        {
+            DesignHashMap myHashMap = new DesignHashMap();
+
+            myHashMap.Put(1, 1);
+            myHashMap.Put(2, 2); 
+            Assert.AreEqual(1, myHashMap.Get(1));
+            Assert.AreEqual(-1, myHashMap.Get(3));    
+            myHashMap.Put(2, 1); 
+            Assert.AreEqual(1, myHashMap.Get(2));    
+            myHashMap.Remove(2); 
+            Assert.AreEqual(-1, myHashMap.Get(2));
+        }
+
+        [TestMethod]
+        public void SetMatrixZeroesTest()
+        {
+            SetMatrixZeroesHashing setMatrixZeroes = new SetMatrixZeroesHashing();
+
+            int[][] input = new int[][] {
+                new int[] {1,1,1 },
+                new int[] {1,0,1 },
+                new int[] {1,1,1}};
+
+            setMatrixZeroes.Solve(input);
+        }
+
+        [TestMethod]
+        public void FindSumInArrayTest()
+        {
+            FindPairSumInArray findPairSumInArray = new FindPairSumInArray();
+
+            int[] input = new int[] { 1, 2, 3 };
+
+            var expected = new List<List<int>>()
+            {
+                new List<int>() {1,2}
+            };
+
+            var actual = findPairSumInArray.Solve(input);
+            Helpers.CheckMatrixEquality(expected.Select(x => x.ToArray()).ToArray(), actual.Select(x => x.ToArray()).ToArray());
+        }        
+
+        [TestMethod]
+        public void BitManipulation_SumOfIntegers_Test()
+        {
+            SumOfTwoIntegers sumOfTwoIntegers = new SumOfTwoIntegers();
+
+            int expected = 3;
+            int actual = sumOfTwoIntegers.Sum(2, 1);
+
+            Assert.AreEqual(expected, actual);
+        }            
+        
+        [TestMethod]
+        public void Linear_KokoEatingBananas_Test()
+        {
+            KokoEatingBananas kokoEatingBananas = new KokoEatingBananas();
+
+            int[] input = new int[] { 3, 6, 7, 11 };
+            int expected = 4;
+
+            int actual = kokoEatingBananas.Solve(input, 8);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Recursion_BackTracking_LetterCombinationInPhone()
+        {
+            LetterCombinationInPhoneNumber letterCombinationInPhoneNumber = new LetterCombinationInPhoneNumber();
+
+            string s = "23";
+            List<string> expected = new List<string>()
+            {
+                "ad","ae","af","bd","be","bf","cd","ce","cf"
+            };
+
+            List<string> actual = letterCombinationInPhoneNumber.Solve(s).ToList();
+            CollectionAssert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void MaxUnitsOnATruck_Test()
+        {
+            MaxUnitsOnATruck maxUnitsOnATruck = new MaxUnitsOnATruck();
+
+            int[][] input = new int[][] { new int[] { 1, 2 }, new int[] { 1, 3 } };
+            int expected = 3;
+
+            int actual = maxUnitsOnATruck.MaximumUnits(input, 1);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void MaxProfitAssignment_Test()
+        {
+            MaxProfitAssignment maxProfitAssignment = new MaxProfitAssignment();
+
+            int[] difficulty = new int[] { 2, 4, 6, 8, 10 };
+            int[] profit = new int[] { 10, 20, 30, 40, 50 };
+            int[] worker = new int[] { 4, 5, 6, 7 };
+
+            int expected = 100;
+            int actual = maxProfitAssignment.GetMaxProfitAssignment(
+                difficulty,
+                profit,
+                worker);
 
             Assert.AreEqual(expected, actual);
         }

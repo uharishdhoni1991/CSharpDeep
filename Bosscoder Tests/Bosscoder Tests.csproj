@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="All\General Concepts\GeneralConceptsTest.cs" />
+    <Compile Include="All\Mentorship Questions\MentorTests.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="All\Assignment Questions\AssignmentTests.cs" />
     <Compile Include="All\Homework Questions\HomeworkTests.cs" />

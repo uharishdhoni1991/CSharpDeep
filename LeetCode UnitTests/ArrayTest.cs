@@ -113,10 +113,10 @@ namespace LeetCode_UnitTests
             CountingNoOfOnes countingNoOfOnes = new CountingNoOfOnes();
 
             int num = 5;
-            int[] expected = new int[] { 0, 1, 1, 2, 1, 1 };
+            int[] expected = new int[] { 0, 1, 1, 2, 1, 2 };
 
             int[] actual = countingNoOfOnes.CountNoOfOnes(num);
-            Assert.AreEqual(expected, actual);
+            CollectionAssert.AreEqual(expected, actual);
         }
 
         [TestMethod]

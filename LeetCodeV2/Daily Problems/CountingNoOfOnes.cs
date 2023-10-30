@@ -10,7 +10,7 @@ namespace LeetCodeV2.Daily_Problems
             List<int> oneCounts = new List<int>();
             int i = 0;
 
-            while(i < n)
+            while(i <= n)
             {
                 oneCounts.Add(CountOnes(i));
                 i++;

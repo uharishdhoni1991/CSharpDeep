@@ -3,9 +3,13 @@ using Bosscoder.Week_2.Homework_Questions;
 using Bosscoder.Week_3.Assignment_Questions;
 using Bosscoder.Week_3.Homework_Questions;
 using Bosscoder.Week_4.Assignment_Questions;
+using Bosscoder.Week_5.Assignment_Questions;
+using Bosscoder.Week_6.Assignment_Questions;
+using Bosscoder.Week_7_StacksAndQueues.Assignement_Questions;
 using Bosscoder.Week1.Assignment_Questions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Bosscoder_Tests.Week1.Assignment_Questions
@@ -485,6 +489,397 @@ namespace Bosscoder_Tests.Week1.Assignment_Questions
 
             int expected = 3;
             int actual = singleNonDuplicate.GetSingleNonDuplicate(input);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void MagneticForceTest()
+        {
+            MagneticForceBetweenBalls mfb = new MagneticForceBetweenBalls();
+            int[] input = new int[] { 5, 4, 3, 2, 1, 1000000000 };
+
+            int expected = 1000000000 - 1;
+            int actual = mfb.MinMagneticForceBetweenBalls(input, 2);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void SmallestBaseTest()
+        {
+            SmallestBase smallestBase = new SmallestBase();
+            string input = "13";
+
+            string expected = "3";
+            string actual = smallestBase.smallestGoodBase(input);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ReversePairsTest()
+        {
+            ReversePairs reversePairs = new ReversePairs();
+            int[] input = new int[] { 1, 3, 2, 3, 1 };
+
+            int expected = 2;
+            int actual = reversePairs.GetReversePairsCount(input);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void CapacityToShipPackageTest()
+        {
+            CapacityToShipPackages capacityToShipPackages = new CapacityToShipPackages();
+            int[] weights = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            int expected = 15;
+            int actual = capacityToShipPackages.Solve(weights, 5);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void NumbersSmallerThanSelfTest()
+        {
+            CountOfNumbersAfterSelf countOfNumbersAfterSelf = new CountOfNumbersAfterSelf();
+            int[] nums = new int[] { 5, 2, 6, 1 };
+
+            int[] expected = new int[] { 2, 1, 1, 0 };
+            int[] actual = countOfNumbersAfterSelf.countSmaller(nums).ToArray();
+
+            CollectionAssert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void UglyNumber2()
+        {
+            //1,2,3,4,5,6,8,9,10,12
+            UglyNumber2 ugly = new UglyNumber2();
+
+            int expected = 1;
+            int actual = ugly.NthUglyNumber(1);
+            
+            Assert.AreEqual(expected, actual);
+
+            int expected1 = 12;
+            int actual1 = ugly.NthUglyNumber(10);
+
+            Assert.AreEqual(expected1, actual1);
+        }
+
+        [TestMethod]
+        public void InputArraySortedIITest()
+        {
+            InputArraySorted inputArraySorted = new InputArraySorted();
+
+            int[] input = new int[] { 1, 3, 6, 7 };
+            int[] expected = new int[] { 1, 2 };
+
+            int[] actual = inputArraySorted.Solve(input, 4);
+            CollectionAssert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void KDiffPairsTest()
+        {
+            KDiffPairs kDiffPairs = new KDiffPairs();
+
+            int[] input = new int[] { 3, 1, 4, 1, 5 };
+            int expected = 2;
+
+            int actual = kDiffPairs.CountPairsWithDiffK(input,input.Length, 2);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void MinExpOfThreeSortedArrays()
+        {
+            MinimizeExpOfThreeSortedArrays minimizeExp = new MinimizeExpOfThreeSortedArrays();
+            int[] input1 = new int[] { 1, 4, 5, 8, 10 };
+            int[] input2 = new int[] { 6, 9, 15 };
+            int[] input3 = new int[] { 2, 3, 6, 6 };
+
+            int expected = 1;
+            int actual = minimizeExp.Solve(input1, input2, input3);
+
+            Assert.AreEqual(expected, actual);
+        }
+        
+        [TestMethod]
+        public void FindMaxLengthofArrayEqualsZero()
+        {
+            FindLengthOfLargestSubarrayWithZeroSum find = new FindLengthOfLargestSubarrayWithZeroSum();
+            int[] input = new int[] { 15, -2, 2, -8, 1, 7, 10, 23 };
+
+            int expected = 5;
+            int actual = find.Solve(input);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void LongestSequenceLengthTest()
+        {
+            LongestConsecutiveSequence longestConsecutiveSequence = new LongestConsecutiveSequence();
+            int[] input = new int[] { 1, 2, 100, 200, 101, 201, 202, 203 };
+
+            int expected = 3;
+            int actual = longestConsecutiveSequence.Solve(input);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void AnagramStringTest()
+        {
+            AnagramString anagramString = new AnagramString();
+            string s1 = "Best";
+            string s2 = "Best";
+
+            bool expected = true;
+            bool actual = anagramString.Solve(s1, s2);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ValidSudokuTest()
+        {
+            Sudoku sudoku = new Sudoku();
+
+            int[][] board = new int[9][] {
+                new int[] {5, 3, 0, 0, 7, 0, 0, 0, 0},
+                new int[] {6, 0, 0, 1, 9, 5, 0, 0, 0},
+                new int[] {0, 9, 8, 0, 0, 0, 0, 6, 0},
+                new int[] {8, 0, 0, 0, 6, 0, 0, 0, 3},
+                new int[] {4, 0, 0, 8, 0, 3, 0, 0, 1},
+                new int[] {7, 0, 0, 0, 2, 0, 0, 0, 6},
+                new int[] {0, 6, 0, 0, 0, 0, 2, 8, 0},
+                new int[] {0, 0, 0, 4, 1, 9, 0, 0, 5},
+                new int[] {0, 0, 0, 0, 8, 0, 0, 7, 9}
+            };
+
+            bool expected = true;
+            bool actual = sudoku.Solve(board);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void LongestSubstringTest()
+        {
+            LongestSubstringWithoutRepeatingChars lst = new LongestSubstringWithoutRepeatingChars();
+
+            string s = "abcbbab";
+            int expected = 3;
+
+            int actual = lst.Solve(s);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void MinimumWindowSubstring()
+        {
+            MinimumWindowSubstring ms = new MinimumWindowSubstring();
+
+            string input = "this is a test string";
+            string pattern = "tist";
+
+            string expected = "t stri";
+            string actual = ms.Solve(input, pattern);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void PalidromePairsTest()
+        {
+            PalindromePairs palindromePairs = new PalindromePairs();
+
+            List<string> input = new List<string>()
+            {
+                "abcd",
+                "dcba",
+                "lls",
+                "s",
+                "sssll"
+            };
+
+            List<List<int>> expected = new List<List<int>>()
+            {
+               new List<int>() {0,1},
+               new List<int>() {1,0 },
+               new List<int>(){3,2},
+               new List<int>(){2,4 }
+            };
+
+            var actual = palindromePairs.Solve(input);
+
+            CollectionAssert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Stack_EvaluateReversePolishNotation_Test()
+        {
+            EvalRevPolishNotation evalRevPolishNotation = new EvalRevPolishNotation();
+
+            string[] input = new string[] { "2", "1", "+", "3", "*" };
+            int expected = 9;
+
+            int actual = evalRevPolishNotation.Solve(input);
+            Assert.AreEqual(expected, actual);
+
+            input = new string[] { "4", "13", "5", "/", "+" };
+            expected = 6;
+
+            actual = evalRevPolishNotation.Solve(input);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Stack_DailyTemperatures_Test()
+        {
+            DailyTemperatures dailyTemperatures = new DailyTemperatures();
+
+            int[] temp = new int[] { 71, 72, 69, 71, 70, 73, 71, 70 };
+            int[] expected = new int[] {1,4,1,2,1,0,0,0 };
+
+            int[] actual = dailyTemperatures.Solve(temp);
+            CollectionAssert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Stack_MinStack_Test()
+        {
+            MinStack minStack = new MinStack();
+
+            minStack.Push(2);
+            minStack.Push(3);
+            minStack.Pop();
+            Assert.AreEqual(minStack.GetMin(), 3);
+            minStack.Push(1);
+            Assert.AreEqual(minStack.GetMin(), 1);
+        }
+
+        [TestMethod]
+        public void Stack_ExpressionRedundant_Test()
+        {
+            ExoressionContainRedundantBracket expressionContain = new ExoressionContainRedundantBracket();
+
+            string s = "(a+b)";
+            bool expected = false;
+
+            bool actual = expressionContain.Check(s);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Stack_LargestRectangleAreaHistogram_Test()
+        {
+            LargestRectangleHistogram histogram = new LargestRectangleHistogram();
+
+            int[] input = new int[] { 2, 1, 5, 6, 2, 3 };
+            int expected = 10;
+
+            int actual = histogram.Solve(input);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Queue_ImplementQueueUsingStack_Test()
+        {
+            ImplementQueueUsingStack queueUsingStack = new ImplementQueueUsingStack();
+
+            queueUsingStack.Push(5);
+            queueUsingStack.Push(6);
+            Assert.AreEqual(5, queueUsingStack.Top());
+            queueUsingStack.Push(7);
+            Assert.AreEqual(5,queueUsingStack.Pop());
+            Assert.AreEqual(6, queueUsingStack.Pop());
+            Assert.AreEqual(7, queueUsingStack.Pop());
+            Assert.AreEqual(true, queueUsingStack.Empty());
+        }
+
+        [TestMethod]
+        public void Queue_ImplementStackUsingQueue_Test()
+        {
+            ImplementStackUsingQueue stackUsingQueue = new ImplementStackUsingQueue();
+
+            stackUsingQueue.Push(5);
+            stackUsingQueue.Push(6);
+            Assert.AreEqual(6, stackUsingQueue.Top());
+            stackUsingQueue.Push(7);
+            Assert.AreEqual(7, stackUsingQueue.Pop());
+            Assert.AreEqual(6, stackUsingQueue.Pop());
+            Assert.AreEqual(5, stackUsingQueue.Pop());
+            Assert.AreEqual(true, stackUsingQueue.Empty());
+        }
+
+        [TestMethod]
+        public void Queue_SlidingWindowMax_Test()
+        {
+            //SlidingWindowMaximum slidingWindow = new SlidingWindowMaximum();
+            //int[] input = new int[] {1,2,3,4,5,6};
+
+            //int[] expected = new int[] { 3, 4, 5, 6 };
+            //int[] actual = slidingWindow.Solve(input, 3);
+
+            //CollectionAssert.AreEqual(expected, actual);
+
+            //input = new int[] { 1, 3, -1, -3, 5, 3, 6, 7 };
+            //expected = new int[] { 3, 3, 5, 5, 6, 7 };
+
+            //actual = slidingWindow.Solve(input, 3);
+
+            //CollectionAssert.AreEqual(expected, actual);
+
+            //input = new int[] { 9, 10, 9, -7, -4, -8, 2, -6 };
+            //expected = new int[] { 10, 10, 9, 2 };
+
+            //actual = slidingWindow.Solve(input, 5);
+
+            //CollectionAssert.AreEqual(expected, actual);
+
+            // Need higher version of C# to implement code 
+        }          
+        
+        [TestMethod]
+        public void Stack_LongestValidParantheses_Test()
+        {
+            LongestValidParantheses longestValid = new LongestValidParantheses();
+
+            string s = "(()";
+            int expected = 2;
+            int actual = longestValid.Solve(s);
+
+            Assert.AreEqual(expected, actual);
+
+            s = "())";
+            expected = 2;
+            actual = longestValid.Solve(s);
+
+            Assert.AreEqual(expected, actual);
+
+            s = "(((";
+            expected = 0;
+            actual = longestValid.Solve(s);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Queue_ButNotUsed_GasStations()
+        {
+            GasStation gasStation = new GasStation();
+
+            int[] gasStations = new int[] { 1, 2, 3, 4, 5 };
+            int[] cost = new int[] { 3, 4, 5, 1, 2 };
+
+            int expected = 3;
+            int actual = gasStation.Solve(gasStations, cost);
 
             Assert.AreEqual(expected, actual);
         }
