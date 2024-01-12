@@ -153,6 +153,16 @@ namespace LeetCode_UnitTests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void NeedleInHayStack_Test()
+        {
+            string needle = "issip";
+            string haystack = "mississippi";
+
+            int actual = _arrayFunc.StrStr(haystack, needle);
+            Assert.AreEqual(4, actual);
+        }
+
         private int[] GenerateNumbers()
         {
             int[] resultantArray = new int[(2 * (int)Math.Pow(10, 5)) + 1];

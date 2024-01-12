@@ -535,6 +535,37 @@ namespace Arrays
 				noOfDigits = 0;
 
 			return noOfDigits;
-		}		
+		}
+
+		public int StrStr(string haystack, string needle)
+		{
+			if (string.IsNullOrEmpty(needle) && string.IsNullOrEmpty(haystack))
+				return -1;
+
+			int count = 0;
+			int n = 0;
+
+			for (int h = 0; h < haystack.Length; h++)
+			{
+				if (haystack[h] == needle[n])
+					count++;
+				else
+				{
+					count = 0;
+					h -= n;
+					n = 0;
+					continue;
+				}
+
+				if (count == needle.Length)
+					return h - needle.Length + 1;
+
+
+				n++;
+			}
+
+			return -1;
+		}
+
 	}
 }

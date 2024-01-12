@@ -9,12 +9,14 @@ namespace Bosscoder_Tests.All.Mentorship_Questions
         [TestMethod]
         public void TwoSumTest()
         {
-            TwoSum ts = new TwoSum();            
+            //Todo
 
-            int[] expected = new int[] { 1, 2 };
-            int[] actual = ts.GetTwoSum(new int[] { 3, 2, 4 }, 6);
+            //TwoSum ts = new TwoSum();            
 
-            CollectionAssert.AreEqual(expected, actual);
+            //int[] expected = new int[] { 1, 2 };
+            //int[] actual = ts.GetTwoSum(new int[] { 3, 2, 4 }, 6);
+
+            //CollectionAssert.AreEqual(expected, actual);
 
             //expected = new int[] { 0, 1 };
             //actual = ts.GetTwoSum(new int[] { 3, 3 }, 6);

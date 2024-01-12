@@ -1,14 +1,15 @@
-﻿using Bosscoder.Week_2.Homework_Questions;
-using Bosscoder.Week_3.Assignment_Questions;
+﻿using Bosscoder.Models;
+using Bosscoder.Week_10_Trees.Homework_Questions;
+using Bosscoder.Week_2.Homework_Questions;
 using Bosscoder.Week_3.Homework_Questions;
 using Bosscoder.Week_4.Homework_Questions;
 using Bosscoder.Week_5.Homework_Questions;
 using Bosscoder.Week_6.Homework_Questions;
-using Bosscoder.Week_8_LinkedList;
+using Bosscoder.Week_8_LinkedList.Homework_Questions;
 using Bosscoder.Week_8_LinkedList.HomeWork_Questions;
+using Bosscoder.Week_9_RecursionAndBackTracking.Homework_Questions;
 using Bosscoder.Week1.Homework_Questions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -68,11 +69,11 @@ namespace Bosscoder_Tests.Homework_Questions
             int actualOut = lsa.LongestSubArray(input);
             Assert.AreEqual(expectedOut, actualOut);
 
-            int[] input2 = new int[] { 4979, -522, 987, 23,324, -1489 ,-187 };
+            int[] input2 = new int[] { 4979, -522, 987, 23, 324, -1489, -187 };
             int expectedOut2 = 3;
 
             int actualOut2 = lsa.LongestSubArray(input2);
-            Assert.AreEqual(expectedOut2, actualOut2);            
+            Assert.AreEqual(expectedOut2, actualOut2);
         }
 
         [TestMethod]
@@ -128,7 +129,7 @@ namespace Bosscoder_Tests.Homework_Questions
             int[][] matrix2 = new int[][]
             {
                 new int[] {1,2,3},
-                new int[]{4,5,6}                
+                new int[]{4,5,6}
             };
 
             int[][] expected1 = new int[][]
@@ -164,7 +165,7 @@ namespace Bosscoder_Tests.Homework_Questions
             int[][] matrix1 = new int[][]
             {
                 new int[] {1,2},
-                new int[] {3,4}                
+                new int[] {3,4}
             };
 
             int[][] expected1 = new int[][]
@@ -288,7 +289,7 @@ namespace Bosscoder_Tests.Homework_Questions
         public void XORQueriesTest()
         {
             XORQueries xORQueries = new XORQueries();
-            int[] input = new int[] {1, 3, 4, 8};
+            int[] input = new int[] { 1, 3, 4, 8 };
             int[][] queries = new int[][] {
                 new int[] { 0, 1 },
                 new int[] { 1, 2 },
@@ -306,7 +307,7 @@ namespace Bosscoder_Tests.Homework_Questions
         {
             HammingDistance hammingDistance = new HammingDistance();
 
-            int[] input = new int[] {4, 14, 2};
+            int[] input = new int[] { 4, 14, 2 };
             int expected = 6;
             int actual = hammingDistance.TotalHammingDistance(input);
 
@@ -410,12 +411,12 @@ namespace Bosscoder_Tests.Homework_Questions
             DesignHashMap myHashMap = new DesignHashMap();
 
             myHashMap.Put(1, 1);
-            myHashMap.Put(2, 2); 
+            myHashMap.Put(2, 2);
             Assert.AreEqual(1, myHashMap.Get(1));
-            Assert.AreEqual(-1, myHashMap.Get(3));    
-            myHashMap.Put(2, 1); 
-            Assert.AreEqual(1, myHashMap.Get(2));    
-            myHashMap.Remove(2); 
+            Assert.AreEqual(-1, myHashMap.Get(3));
+            myHashMap.Put(2, 1);
+            Assert.AreEqual(1, myHashMap.Get(2));
+            myHashMap.Remove(2);
             Assert.AreEqual(-1, myHashMap.Get(2));
         }
 
@@ -446,7 +447,7 @@ namespace Bosscoder_Tests.Homework_Questions
 
             var actual = findPairSumInArray.Solve(input);
             Helpers.CheckMatrixEquality(expected.Select(x => x.ToArray()).ToArray(), actual.Select(x => x.ToArray()).ToArray());
-        }        
+        }
 
         [TestMethod]
         public void BitManipulation_SumOfIntegers_Test()
@@ -457,8 +458,8 @@ namespace Bosscoder_Tests.Homework_Questions
             int actual = sumOfTwoIntegers.Sum(2, 1);
 
             Assert.AreEqual(expected, actual);
-        }            
-        
+        }
+
         [TestMethod]
         public void Linear_KokoEatingBananas_Test()
         {
@@ -512,6 +513,295 @@ namespace Bosscoder_Tests.Homework_Questions
                 difficulty,
                 profit,
                 worker);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void LinkedList_RemoveDuplicates_Test()
+        {
+            RemoveDuplicatesFromLinkedList removeDuplicatesFromLinkedList = new RemoveDuplicatesFromLinkedList();
+
+            Node head = new Node(1);
+            head.Next = new Node(2);
+            head.Next.Next = new Node(3);
+            head.Next.Next.Next = new Node(3);
+            head.Next.Next.Next.Next = new Node(4);
+            head.Next.Next.Next.Next.Next = new Node(5);
+            head.Next.Next.Next.Next.Next.Next = new Node(5);
+
+            Node expected = new Node(1);
+            expected.Next = new Node(2);
+            expected.Next.Next = new Node(3);
+            expected.Next.Next.Next = new Node(4);
+            expected.Next.Next.Next.Next = new Node(5);
+
+            Node actual = removeDuplicatesFromLinkedList.Solve(head);
+            AssertLLResult(expected, actual);
+
+            head = new Node(1);
+            head.Next = new Node(1);
+            head.Next.Next = new Node(1);
+
+            expected = new Node(1);
+
+            actual = removeDuplicatesFromLinkedList.Solve(head);
+
+            AssertLLResult(expected, actual);
+        }
+
+        internal void AssertLLResult(Node expected, Node actual)
+        {
+            while (expected.Next != null && actual.Next != null)
+            {
+                Assert.AreEqual(expected.Val, actual.Val);
+
+                expected = expected.Next;
+                actual = actual.Next;
+            }
+        }
+
+        [TestMethod]
+        public void LinkedList_Palindrome_Test()
+        {
+            PalindromeLinkedList palindromeLinkedList = new PalindromeLinkedList();
+
+            Node head = new Node(1);
+            head.Next = new Node(2);
+            head.Next.Next = new Node(1);
+
+            bool expected = true;
+            bool actual = palindromeLinkedList.IsPalindrome(head);
+
+            Assert.AreEqual(expected, actual);
+
+            head = new Node(1);
+            head.Next = new Node(2);
+            head.Next.Next = new Node(2);
+            head.Next.Next.Next = new Node(1);
+
+            expected = true;
+            actual = palindromeLinkedList.IsPalindrome(head);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void LinkedList_ReverseBetweenTwoPoints_Test()
+        {
+            ReverseLinkedListBetweenTwoPoints rev = new ReverseLinkedListBetweenTwoPoints();
+
+            Node head = new Node(1);
+            head.Next = new Node(2);
+            head.Next.Next = new Node(3);
+            head.Next.Next.Next = new Node(4);
+            head.Next.Next.Next.Next = new Node(5);
+
+            Node expected = new Node(1);
+            expected.Next = new Node(4);
+            expected.Next.Next = new Node(3);
+            expected.Next.Next.Next = new Node(2);
+            expected.Next.Next.Next.Next = new Node(5);
+
+            Node actual = rev.Solve(head, 2, 4);
+
+            AssertLLResult(expected, actual);
+
+            head = new Node(5);
+            expected = new Node(5);
+
+            actual = rev.Solve(head,1,1);
+
+            AssertLLResult(expected, actual);
+
+            head = new Node(3);
+            head.Next = new Node(5);
+
+            expected = new Node(5);
+            expected.Next = new Node(3);
+
+            actual = rev.Solve(head, 1, 2);
+
+            AssertLLResult(expected, actual);
+        }
+
+        [TestMethod]
+        public void LinkedList_Sorted_Test()
+        {
+            SortLinkedList sortLinkedList = new SortLinkedList();
+
+            Node head = new Node(3);
+            head.Next = new Node(2);
+            head.Next.Next = new Node(1);
+            head.Next.Next.Next = new Node(5);
+            head.Next.Next.Next.Next = new Node(4);
+
+            Node expected = new Node(1);
+            expected.Next = new Node(2);
+            expected.Next.Next = new Node(3);
+            expected.Next.Next.Next = new Node(4);
+            expected.Next.Next.Next.Next = new Node(5);
+
+            Node actual = sortLinkedList.Solve(head);
+
+            AssertLLResult(expected, actual);
+        }
+        
+        [TestMethod]
+        public void Recursion_SqRt_Test()
+        {
+            SqRt sqRt = new SqRt();
+
+            int expected = 2;
+            int actual = sqRt.Solve(5);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Recursion_CombinationSumII_Test()
+        {  
+            CombinationSumII combinationSumII = new CombinationSumII();
+
+            List<List<int>> expected = new List<List<int>>()
+            {
+                new List<int>(){1 , 1, 6},
+                new List<int>(){1 , 2, 5},
+                new List<int>(){1 , 7},
+                new List<int>(){2, 6}
+            };
+
+            var input = new int[]
+            {
+                10, 1, 2, 7, 6, 1, 5
+            };
+
+            var actual = combinationSumII.Solve(input, 8);
+
+            for(int i = 0; i < expected.Count; i++)
+            {
+                for(int j =0; j< expected[i].Count; j++)
+                {
+                    Assert.AreEqual(expected[i][j], actual[i][j]);
+                }
+            }
+        }
+
+        [TestMethod]
+        public void Trees_BuildTree_Test()
+        {
+            int[] preorder = new int[] { 3, 9, 20, 15, 7 };
+            int[] inorder = new int[] { 9, 3, 15, 20, 7 };
+
+            var expectedTree = new TreeNode(3);
+            expectedTree.Left = new TreeNode(9);
+            expectedTree.Right = new TreeNode(20);
+            expectedTree.Right.Left = new TreeNode(15);
+            expectedTree.Right.Right = new TreeNode(7);
+
+            LT105_BuildTree buildTree = new LT105_BuildTree();
+            var actualTree =buildTree.BuildTree(preorder, inorder);
+
+            Assert.IsTrue(TreeNode.IsIdentical(expectedTree, actualTree));
+        }
+
+        [TestMethod]
+        public void Trees_ZigZagLevelOrderTraversal_Test()
+        {
+            var tree = new TreeNode(3);
+            tree.Left = new TreeNode(9);
+            tree.Right = new TreeNode(20);
+            tree.Right.Left = new TreeNode(15);
+            tree.Right.Right = new TreeNode(7);
+
+            LT103_ZigZagLevelOrderTraversal zigZag = new LT103_ZigZagLevelOrderTraversal();
+            var actual = zigZag.ZigzagLevelOrder(tree);
+
+            var expected = new List<List<int>>()
+            {
+                new List<int>(){3 },
+                new List<int>(){20,9},
+                new List<int>(){15,7}
+            };
+
+            for (int i = 0; i < expected.Count; i++)
+            {
+                for (int j = 0; j < expected[i].Count; j++)
+                {
+                    Assert.AreEqual(expected[i][j], actual[i][j]);
+                }
+            }
+        }
+
+        [TestMethod]
+        public void Trees_SameTree_Test()
+        {
+            var tree1 = new TreeNode(1);
+            tree1.Left = new TreeNode(2);
+            tree1.Right = new TreeNode(3);
+
+            var tree2 = new TreeNode(1);
+            tree2.Left = new TreeNode(2);
+            tree2.Right = new TreeNode(3);
+
+            LT100_SameTree same = new LT100_SameTree();
+            Assert.IsTrue(same.Solve(tree1, tree2));
+        }
+
+        [TestMethod]
+        public void Tress_PathSum_Test()
+        {
+            var tree = new TreeNode(5);
+            tree.Left = new TreeNode(4);
+            tree.Right = new TreeNode(8);
+            tree.Left.Left = new TreeNode(11);
+            tree.Left.Left.Left = new TreeNode(7);
+            tree.Left.Left.Right = new TreeNode(2);
+            tree.Right.Left = new TreeNode(13);
+            tree.Right.Right = new TreeNode(4);
+            tree.Right.Right.Right = new TreeNode(1);
+
+            LT112_PathSum pathSum = new LT112_PathSum();
+            Assert.IsTrue(pathSum.HasPathSum(tree, 22));
+        }
+
+        [TestMethod]
+        public void Trees_InvertTree_Test()
+        {
+            var tree = new TreeNode(4);
+            tree.Left = new TreeNode(2);
+            tree.Right = new TreeNode(7);
+            tree.Left.Left = new TreeNode(1);
+            tree.Left.Right = new TreeNode(3);
+            tree.Right.Left = new TreeNode(6);
+            tree.Right.Right = new TreeNode(9);
+
+            var expectedTree = new TreeNode(4);
+            expectedTree.Left = new TreeNode(7);
+            expectedTree.Right = new TreeNode(2);
+            expectedTree.Left.Left = new TreeNode(9);
+            expectedTree.Left.Right = new TreeNode(6);
+            expectedTree.Right.Left = new TreeNode(3);
+            expectedTree.Right.Right = new TreeNode(1);
+
+            LT226_InvertBinaryTree invertBinaryTree = new LT226_InvertBinaryTree();
+            var actualTree = invertBinaryTree.InvertTree(tree);
+
+            Assert.IsTrue(new LT100_SameTree().Solve(expectedTree, actualTree));
+        }
+
+        [TestMethod]
+        public void Trees_SumOfLeftLeaves()
+        {
+            var tree = new TreeNode(3);
+            tree.Left = new TreeNode(9);
+            tree.Right = new TreeNode(20);
+            tree.Right.Left = new TreeNode(15);
+            tree.Right.Right = new TreeNode(7);
+
+            int expected = 24;
+            LT404_SumOfLeftleaves sumOfLeftleaves = new LT404_SumOfLeftleaves();
+            int actual = sumOfLeftleaves.SumOfLeftLeaves(tree);
 
             Assert.AreEqual(expected, actual);
         }

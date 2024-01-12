@@ -9,10 +9,10 @@ namespace Bosscoder.Mentorship
         //ToDo
         public int[] GetTwoSum(int[] nums, int target)
         {
-            Dictionary<int,List<int>> dict = new Dictionary<int, List<int>>();
-            
+            Dictionary<int, List<int>> dict = new Dictionary<int, List<int>>();
 
-            for (int k =0; k < nums.Length; k++)
+
+            for (int k = 0; k < nums.Length; k++)
             {
                 if (!dict.ContainsKey(nums[k]))
                     dict[nums[k]] = new List<int> { k };
@@ -20,18 +20,18 @@ namespace Bosscoder.Mentorship
                     dict[nums[k]].Add(k);
             }
 
-            Array.Sort(nums);
+            //Array.Sort(nums);
 
             int i = 0;
             int j = nums.Length - 1;
 
-            while(i < j)
+            while (i < j)
             {
                 int sum = nums[i] + nums[j];
 
                 if (sum == target)
                 {
-                    if(nums[i] == nums[j])
+                    if (nums[i] == nums[j])
                     {
 
                     }

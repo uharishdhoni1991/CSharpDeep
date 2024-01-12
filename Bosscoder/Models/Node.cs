@@ -2,13 +2,19 @@
 {
     public class Node
     {
-        public Node(int val, Node node)
+        private readonly int _val;
+
+        public Node(int val)
         {
-            Val = val;
-            Next = node;
+            _val = val;         
         }
 
-        public int Val { get; set; }
+        public int Val { get { return _val; } }
         public Node Next { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Val}-{Next?.Val}";
+        }
     }
 }

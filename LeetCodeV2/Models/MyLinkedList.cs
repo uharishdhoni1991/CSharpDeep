@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 
 namespace LeetCodeV2.Models
 {
@@ -106,22 +107,44 @@ namespace LeetCodeV2.Models
         {
             if (head == null || head.Next == null)
                 return head;
-
+            
             SingleListNode oddPointer = head;
             SingleListNode evenPointer = head.Next;
             SingleListNode even = head.Next;
 
-            while (evenPointer != null || evenPointer.Next != null)
+            while (evenPointer != null && evenPointer.Next != null)
             {
                 oddPointer.Next = evenPointer.Next;
                 oddPointer = oddPointer.Next;
-                evenPointer.Next = evenPointer.Next;
+                evenPointer.Next = oddPointer.Next;
                 evenPointer = evenPointer.Next;               
             }
 
             oddPointer.Next = even;
 
-            return oddPointer;
+            return head;
+        }
+
+        public bool IsPalindrome(SingleListNode head)
+        {
+            if (head == null)
+                return false;
+
+            SingleListNode endOfFirstHalf = FindFirstHalfEnd(head);
+            SingleListNode reverseSecondHalf = ReverseSecondHalf(endOfFirstHalf.Next);
+
+            return true;
+        }
+
+        private SingleListNode ReverseSecondHalf(SingleListNode next)
+        {
+            Head = next;
+            return ReverseLinkedList();
+        }
+
+        private SingleListNode FindFirstHalfEnd(SingleListNode head)
+        {
+            throw new NotImplementedException();
         }
 
         public override string ToString()
