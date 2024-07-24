@@ -86,10 +86,20 @@
     <Compile Include="Week 12_Greedy\Assignment Questions\LT628_MaxProductOfThreeNumbers.cs" />
     <Compile Include="Models\Time1Attribute.cs" />
     <Compile Include="Week 13_14_15_DynamicProgramming\Assignment Questions\GFG_NumberOfWaysToPairPeople.cs" />
+    <Compile Include="Week 13_14_15_DynamicProgramming\Assignment Questions\LT10_RegularExpressionMatching.cs" />
+    <Compile Include="Week 13_14_15_DynamicProgramming\Assignment Questions\LT1143_LongestCommonSubSequence.cs" />
+    <Compile Include="Week 13_14_15_DynamicProgramming\Assignment Questions\LT115_DistinctSubsequences.cs" />
+    <Compile Include="Week 13_14_15_DynamicProgramming\Assignment Questions\LT120_TriangleArray.cs" />
     <Compile Include="Week 13_14_15_DynamicProgramming\Assignment Questions\LT1654_MinJumpsToReachHome.cs" />
+    <Compile Include="Week 13_14_15_DynamicProgramming\Assignment Questions\LT174_DungeonGame.cs" />
+    <Compile Include="Week 13_14_15_DynamicProgramming\Assignment Questions\LT516_LongestPalindromicSubSequence.cs" />
+    <Compile Include="Week 13_14_15_DynamicProgramming\Assignment Questions\LT64_MinimumPathSum.cs" />
     <Compile Include="Week 13_14_15_DynamicProgramming\Assignment Questions\LT70_ClimbingStairs.cs" />
+    <Compile Include="Week 13_14_15_DynamicProgramming\Assignment Questions\LT72_EditDistance.cs" />
+    <Compile Include="Week 13_14_15_DynamicProgramming\Assignment Questions\LT805_SplitArrayWithSameAverage.cs" />
     <Compile Include="Week 13_14_15_DynamicProgramming\Assignment Questions\LT91_DecodeWays.cs" />
     <Compile Include="Week 13_14_15_DynamicProgramming\Assignment Questions\MemoizationAttribute.cs" />
+    <Compile Include="Week 13_14_15_DynamicProgramming\Assignment Questions\NoSpaceAttribute.cs" />
     <Compile Include="Week 13_14_15_DynamicProgramming\Assignment Questions\RecursionAttribute.cs" />
     <Compile Include="Week 13_14_15_DynamicProgramming\Assignment Questions\SpaceOptimisationAttribute.cs" />
     <Compile Include="Week 13_14_15_DynamicProgramming\Assignment Questions\TabulationAttribute.cs" />
@@ -240,6 +250,8 @@
     <Content Include="Images\array-icon-512x512-slztyf8v.png" />
     <None Include="Week 4\Assignment Questions\README,MD" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Week 17_Graphs\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

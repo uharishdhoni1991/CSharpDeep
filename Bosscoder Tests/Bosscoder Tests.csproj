@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="All\General Concepts\GeneralConceptsTest.cs" />
+    <Compile Include="All\MAQ\Arrays\Arrays.cs" />
     <Compile Include="All\Mentorship Questions\MentorTests.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="All\Assignment Questions\AssignmentTests.cs" />
@@ -61,6 +62,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Bosscoder MAQ\Bosscoder MAQ.csproj">
+      <Project>{FB2CEC55-A07E-4E50-A0E0-F2F41BBD16E3}</Project>
+      <Name>Bosscoder MAQ</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Bosscoder\Bosscoder.csproj">
       <Project>{2675D9F2-4062-4973-B10A-BF50AB760280}</Project>
       <Name>Bosscoder</Name>

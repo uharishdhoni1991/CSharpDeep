@@ -1,4 +1,4 @@
-﻿namespace Bosscoder.Week_8_LinkedList.HomeWork_Questions
+﻿namespace Bosscoder.List.HomeWork_Questions
 {
     //Bit Manipulation
     //Need to elaborate logic

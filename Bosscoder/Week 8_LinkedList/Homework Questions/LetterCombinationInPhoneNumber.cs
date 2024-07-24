@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Bosscoder.Week_8_LinkedList.HomeWork_Questions
+namespace Bosscoder.List.HomeWork_Questions
 {
     /*Revisit and Revise*/
     public class LetterCombinationInPhoneNumber

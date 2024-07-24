@@ -1,6 +1,6 @@
 ﻿using Bosscoder.Models;
 
-namespace Bosscoder.Week_8_LinkedList.Assignment_Questions
+namespace Bosscoder.List.Assignment_Questions
 {
     public class RemoveNthNode
     {

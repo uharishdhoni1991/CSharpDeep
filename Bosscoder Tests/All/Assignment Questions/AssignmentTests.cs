@@ -10,7 +10,7 @@ using Bosscoder.Week_4.Assignment_Questions;
 using Bosscoder.Week_5.Assignment_Questions;
 using Bosscoder.Week_6.Assignment_Questions;
 using Bosscoder.Week_7_StacksAndQueues.Assignement_Questions;
-using Bosscoder.Week_8_LinkedList.Assignment_Questions;
+using Bosscoder.List.Assignment_Questions;
 using Bosscoder.Week_9_RecursionAndBackTracking;
 using Bosscoder.Week_9_RecursionAndBackTracking.Assignement_Questions;
 using Bosscoder.Week1.Assignment_Questions;
@@ -1599,6 +1599,143 @@ namespace Bosscoder_Tests.Week1.Assignment_Questions
             int expected = 4;
 
             int actual = pair.Solve(3);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void DP_RegularExpression()
+        {
+            LT10_RegularExpressionMatching reg = new LT10_RegularExpressionMatching();
+
+            string input = "aa";
+            string pattern = "a*";
+
+            bool expected = true;
+            bool actual = reg.SolveDFS(input, pattern);
+
+            Assert.AreEqual(expected, actual);
+
+            bool actualMemo = reg.SolveDFS_Memo(input, pattern);
+            Assert.AreEqual(expected, actualMemo);
+        }
+
+        [TestMethod]
+        public void DP_MinimumPathSum()
+        {
+            LT64_MinimumPathSum minPathSum = new LT64_MinimumPathSum();
+
+            int[][] mat = new int[][] { new int[] { 1, 2 }, new int[] { 3, 4 } };
+
+            int expected = 7;
+            int actual = minPathSum.Solve(mat);
+
+            Assert.AreEqual(expected, actual);
+
+            int actualMemo = minPathSum.SolveMemo(mat);
+            Assert.AreEqual(expected, actualMemo);
+        }
+
+        [TestMethod]
+        public void DP_LongestCommonSubSequence()
+        {
+            LT1143_LongestCommonSubSequence lcs = new LT1143_LongestCommonSubSequence();
+
+            int expected = 3;
+            int actual = lcs.LongestCommonSubsequence("abc", "abc");
+
+            Assert.AreEqual(expected, actual);
+
+            int actualTwo = lcs.LongestCommonSubsequence("abc", "ac");
+            Assert.AreEqual(2, actualTwo);
+        }
+
+        [TestMethod]
+        public void DP_EditDistance_Test()
+        {
+            LT72_EditDistance editDistance = new LT72_EditDistance();
+
+            int expected = 3;
+            int actual = editDistance.MinDistance("horse", "ros");
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void DP_LongestPalindromicSubsequence_Test()
+        {
+            LT516_LongestPalindromicSubSequence lps = new LT516_LongestPalindromicSubSequence();
+
+            string input = "malayalam";
+            int expected = input.Length;
+
+            int actual = lps.Solve(input);
+
+            Assert.AreEqual(expected, actual);
+
+            int actualTab = lps.SolveTabulation(input);
+            Assert.AreEqual(expected, actualTab);
+        }
+
+        [TestMethod]
+        public void DP_SplitArrayWithSameAvg_Test()
+        {
+            LT805_SplitArrayWithSameAverage split = new LT805_SplitArrayWithSameAverage();
+
+            int[] input = new int[] { 1, 2, 3 };
+            bool actual = split.SplitArraySameAverage(input);
+
+            Assert.IsTrue(actual);
+        }
+
+        [TestMethod]
+        public void DP_DistinctSubSequence()
+        {
+            LT115_DistinctSubsequences ds = new LT115_DistinctSubsequences();
+
+            string input = "rabbbit";
+            string pattern = "rabbit";
+
+            int expected = 3;
+            int actual = ds.NumDistinct(input, pattern);
+
+            Assert.AreEqual(expected, actual);
+
+            expected = 5;
+            string input2 = "babgbag";
+            string pattern2 = "bag";
+
+            actual = ds.NumDistinct(input2, pattern2);
+
+            Assert.AreEqual(expected, actual);
+
+            expected = 5;         
+            actual = ds.NumDistinctMemoized(input2, pattern2);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void DP_TriangleArray()
+        {
+            LT120_TriangleArray ta = new LT120_TriangleArray();
+
+            List<IList<int>> triangle = new List<IList<int>> { new List<int>() { 1 }, new List<int>() { 1, 2 } };
+            int expected = 2;
+
+            int actual = ta.MinimumTotal(triangle);
+            Assert.AreEqual(expected, actual);
+
+            triangle = new List<IList<int>>
+            {
+                new List<int>() { 2 },
+                new List<int>() { 3,4 } ,
+                new List<int>() { 6,5,7},
+                new List<int>() { 4,1,8,3}
+            };
+
+            expected = 11;
+            actual = ta.MinimumTotal(triangle);
+
             Assert.AreEqual(expected, actual);
         }
     }

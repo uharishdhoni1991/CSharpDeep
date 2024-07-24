@@ -1,7 +1,7 @@
 ﻿using Bosscoder.Models;
 using System.Collections.Generic;
 
-namespace Bosscoder.Week_8_LinkedList.Homework_Questions
+namespace Bosscoder.List.Homework_Questions
 {
     public class PalindromeLinkedList
     {

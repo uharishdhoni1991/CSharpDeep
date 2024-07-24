@@ -43,8 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Daily Problems\ContiguousArray.cs" />
     <Compile Include="Daily Problems\CountingNoOfOnes.cs" />
     <Compile Include="Daily Problems\IsPalindromeNumber.cs" />
+    <Compile Include="Daily Problems\LT2958_LengthOfLongestSubArrayWithAtMostFrequencyK.cs" />
+    <Compile Include="Daily Problems\LT452_MinNumOfArrowsToBurstBalloons.cs" />
+    <Compile Include="Daily Problems\LT713_SubArrayProdLessThanK.cs" />
+    <Compile Include="Daily Problems\ProductOfArrayExceptSelf.cs" />
     <Compile Include="Daily Problems\ReducingDishes.cs" />
     <Compile Include="Daily Problems\SearchInRotatedSortedArray.cs" />
     <Compile Include="Models\MyLinkedList.cs" />
@@ -55,6 +60,12 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Description.MD" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bosscoder\Bosscoder.csproj">
+      <Project>{2675D9F2-4062-4973-B10A-BF50AB760280}</Project>
+      <Name>Bosscoder</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

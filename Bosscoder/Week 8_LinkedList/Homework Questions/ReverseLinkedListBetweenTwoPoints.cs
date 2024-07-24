@@ -1,6 +1,6 @@
 ﻿using Bosscoder.Models;
 
-namespace Bosscoder.Week_8_LinkedList.Homework_Questions
+namespace Bosscoder.List.Homework_Questions
 {
     public class ReverseLinkedListBetweenTwoPoints
     {

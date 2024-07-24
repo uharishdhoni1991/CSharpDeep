@@ -113,5 +113,92 @@ namespace LeetCode_UnitTests
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void ProductExceptSelfTest()
+        {
+            ProductOfArrayExceptSelf prod = new ProductOfArrayExceptSelf();
+            int[] arr = new int[] { 5, 7, 3, 2 };
+
+            int[] actual = prod.ProductExceptSelf(arr);
+
+            CollectionAssert.AreEqual(new int[] { 42, 30, 70, 105 }, actual);
+        }
+
+        [TestMethod]
+        public void ContiguousArrayTest()
+        {
+            /*ToDo : Fix Later*/
+            //ContiguousArray ca = new ContiguousArray();
+            //int[] arr = new int[] { 0, 1, 0 };
+
+            //int actual = ca.FindMaxLength(arr);
+            //Assert.AreEqual(2, actual);
+
+            //arr = new int[] { 0, 1};
+
+            //actual = ca.FindMaxLength(arr);
+            //Assert.AreEqual(2, actual);
+
+            //arr = new int[] { 0, 0, 1, 0, 0, 0, 1, 1 };
+
+            //actual = ca.FindMaxLength(arr);
+            //Assert.AreEqual(6, actual);
+        }
+
+        [TestMethod]
+        public void MinNumberOfArrows()
+        {
+            LT452_MinNumOfArrowsToBurstBalloons minArrows = new LT452_MinNumOfArrowsToBurstBalloons();
+
+            int[][] arr = new int[][] { new int[] { 10, 16 }, new int[] { 2, 8 }, new int[] { 1, 6 }, new int[] { 7, 12 } };
+
+            int actual = minArrows.FindMinArrowShots(arr);
+
+            Assert.AreEqual(2, actual);
+
+            arr = new int[][] {
+                new int[] { 3, 9 },
+                new int[] { 7, 12 },
+                new int[] { 3, 8 },
+                new int[] { 6, 8 },
+                new int[] { 9, 10 },
+                new int[] { 2, 9 },
+                new int[] { 0, 9 },
+                new int[] { 3, 9 },
+                new int[] { 0, 6 },
+                new int[] { 2, 8 } };
+
+
+            actual = minArrows.FindMinArrowShots(arr);
+
+            Assert.AreEqual(2, actual);
+        }
+
+        [TestMethod]
+        public void SubArrayProdLessThanK()
+        {
+            LT713_SubArrayProdLessThanK subArray = new LT713_SubArrayProdLessThanK();
+
+            int[] arr = new int[] { 10, 5, 2, 6 };
+
+            int expected = 8;
+            int actual = subArray.NumSubarrayProductLessThanK(arr, 100);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void MaxSubarrayLengthTest()
+        {
+            LT2958_LengthOfLongestSubArrayWithAtMostFrequencyK subArray = new LT2958_LengthOfLongestSubArrayWithAtMostFrequencyK();
+
+            int[] arr = new int[] { 1, 2, 3, 1, 2, 3, 1, 2 };
+
+            int expected = 6;
+            int actual = subArray.MaxSubarrayLength(arr, 2);
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
